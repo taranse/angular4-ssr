@@ -15,6 +15,9 @@ import { BrowserModule } from '@angular/platform-browser';
     ServerModule,
     ServerTransferStateModule,
     AppModule
+  ],
+  providers: [
+
   ]
 })
 export class ServerAppModule {

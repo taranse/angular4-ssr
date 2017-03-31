@@ -14,5 +14,9 @@
   },
   "include": [
     "src"
-  ]
+  ],
+  "angularCompilerOptions": {
+    "genDir": "./src/ngfactory",
+    "entryModule": "./src/app/app.module#AppModule"
+  }
 }

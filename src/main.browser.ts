@@ -3,6 +3,8 @@ import 'reflect-metadata';
 import 'rxjs/Observable';
 import 'hammerjs';
 import 'rxjs/add/operator/map';
+import 'jquery/dist/jquery.min';
+import 'materialize-css/dist/js/materialize.min';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 import { BrowserAppModule } from './app/browser-app.module';
 

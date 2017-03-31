@@ -1,0 +1,95 @@
+.orange-footer {
+  height:60px;
+  padding:10px 0;
+}
+.orange-footer h2 {
+  font-size:44px;
+  line-height:40px;
+  text-align:left;
+  text-transform:uppercase;
+}
+.orange-footer p {
+  font-size:16px;
+  line-height:1.25;
+  margin-left:5px;
+  text-align:left;
+}
+.orange-footer form {
+  position:relative;
+}
+.orange-footer form md-icon {
+  padding:0 5px;
+}
+.orange-footer form input {
+  height:40px;
+}
+.orange-footer form input.email {
+  margin:0;
+  background-color:#fff;
+  width:65%;
+  padding-left:30px;
+  font-size:1.2rem;
+}
+.orange-footer form input.sub-but {
+  border:0;
+  font-size:1.15rem;
+  background:#1e1d1c;
+  width:40%;
+  color:#fff;
+}
+.navigate-footer li {
+  line-height:2;
+}
+.navigate-footer li.head-map h4 {
+  font-size:1.5rem;
+  margin-bottom:15px;
+  line-height:40px
+}
+.navigate-footer li a {
+  color:#272727;
+  font-size:1.1rem;
+}
+.navigate-footer li a:hover {
+  color:#272727;
+  text-decoration:underline;
+}
+.navigate-footer li span {
+  color:#000;
+  font-size:0.8rem;
+  vertical-align:super;
+  line-height:1;
+}
+.icons-footer svg {
+  width:50px;
+  height:50px;
+  margin:5px;
+}
+.icons-footer svg circle {
+  stroke-miterlimit:10;
+  stroke-width:16px;
+}
+.cart-icons svg {
+  max-width:150px;
+  width:30%;
+  margin:0 0.5%;
+  max-height:100px;
+}
+@media (max-width:959px) {
+  .orange-footer {
+    height:auto;
+  }
+  .orange-footer form {
+    max-width:650px;
+    margin:0.75rem auto;
+  }
+}
+@media (max-width:599px) {
+  .orange-footer p {
+    text-align:center;
+    font-size: 15px;
+  }
+  .navigate-footer ul {
+    width:100%;
+    text-align:center;
+  }
+}

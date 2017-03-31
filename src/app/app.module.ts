@@ -6,23 +6,21 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeView } from './home/home-view.component';
 import { TransferHttpModule } from '../modules/transfer-http/transfer-http.module';
-import { MaterialModule } from '@angular/material';
 import { FooterComponent } from './globals/footer/footer.component';
-
+import { HeaderComponent } from './globals/header/header.component';
 
 @NgModule({
 	imports: [
     CommonModule,
     HttpModule,
     TransferHttpModule,
-    MaterialModule,
     RouterModule.forRoot([
       { path: '', component: HomeView, pathMatch: 'full'},
       { path: 'lazy', loadChildren: './+lazy/lazy.module#LazyModule'},
       { path: 'main', loadChildren: './main/main.module#MainModule'}
     ])
 	],
-	declarations: [ AppComponent, HomeView, FooterComponent ],
+	declarations: [ AppComponent, HomeView, FooterComponent, HeaderComponent ],
   exports: [ AppComponent ]
 })
 export class AppModule {}
