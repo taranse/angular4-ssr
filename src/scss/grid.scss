@@ -1,0 +1,87 @@
+@import "media";
+.flex {
+  @for $i from 1 through 20 {
+    &-#{$i * 5} {
+      flex:1 1 ($i * 5 * 1%)
+    }
+  }
+  @each $col in $grid {
+    &-#{$col} {
+      @include respond-to($col) {
+        @for $i from 1 through 20 {
+          &-#{$i * 5} {
+            flex:1 1 ($i * 5 * 1%) !important
+          }
+        }
+      }
+    }
+  }
+}
+.layout {
+  @each $row in row, column, row-reverse, column-reverse {
+    &-#{$row} {
+      display:flex;
+      flex-direction:$row;
+      @each $col in $grid {
+        &-#{$col} {
+          @include respond-to($col) {
+            display:flex;
+            flex-direction:$row !important;
+          }
+        }
+      }
+    }
+  }
+  @each $wr in wrap, no-wrap {
+    &-#{$wr} {
+      flex-wrap:wrap;
+      @each $col in $grid {
+        &-#{$col} {
+          @include respond-to($col) {
+            flex-wrap:$wr !important;
+          }
+        }
+      }
+    }
+  }
+  &-align {
+    @each $row1 in start, end, center, between, around {
+      @each $row2 in start, end, center, stretch, baseline {
+        @each $col in $grid {
+          &-#{$col} {
+            &-#{$row1}-#{$row2} {
+              @include respond-to($col) {
+                @if ($row1 == start or $row1 == end) {
+                  justify-content:flex-#{$row1} !important;
+                } @else if ($row1 == center) {
+                  justify-content:#{$row1} !important;
+                } @else if ($row1 == between or $row1 == around) {
+                  justify-content:space-#{$row1} !important;
+                }
+                @if ($row2 == start or $row2 == end) {
+                  align-items:felx-#{$row2} !important;
+                } @else {
+                  align-items:#{$row2} !important;
+                }
+              }
+            }
+          }
+        }
+        &-#{$row1}-#{$row2} {
+          @if ($row1 == start or $row1 == end) {
+            justify-content:flex-#{$row1};
+          } @else if ($row1 == center) {
+            justify-content:#{$row1};
+          } @else if ($row1 == between or $row1 == around) {
+            justify-content:space-#{$row1};
+          }
+          @if ($row2 == start or $row2 == end) {
+            align-items:felx-#{$row2};
+          } @else {
+            align-items:#{$row2};
+          }
+        }
+      }
+    }
+  }
+}
