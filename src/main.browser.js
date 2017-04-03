@@ -1,7 +1,6 @@
 import 'zone.js/dist/zone';
 import 'reflect-metadata';
 import 'rxjs/Observable';
-import 'hammerjs';
 import 'rxjs/add/operator/map';
 import 'jquery/dist/jquery.min';
 import 'materialize-css/dist/js/materialize.min';

@@ -47,9 +47,14 @@ export function View_HeaderComponent_0(l) {
             ]
         ], null, null, null, null, null)),
         (l()(), import1.ɵted(null, ['\n        '])),
-        (l()(), import1.ɵeld(0, null, null, 1, 'button', [[
+        (l()(), import1.ɵeld(0, null, null, 1, 'button', [
+            [
                 'class',
                 'grey lighten-2 menu-sidenav-button '
+            ],
+            [
+                'md-button',
+                ''
             ]
         ], null, [[
                 null,

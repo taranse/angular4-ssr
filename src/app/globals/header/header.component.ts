@@ -1,11 +1,14 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { trigger, state, style, animate, transition} from '@angular/animations';
 import { Navigate, Phones } from './header.interface';
+import { MdbSidenavComponent } from '../../materials-bclight';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
+  @ViewChild('sidenav') sidenav: MdbSidenavComponent;
   phones: Phones          = {
     allPhones: ['8 800 553 55 55', '+7 (495) 517 77 34'],
     main: '8 800 553 55 55',
@@ -23,7 +26,7 @@ export class HeaderComponent implements OnInit {
       name: 'Доставка/Оплата',
       selectorClass: 'black-text',
       link: {
-        alias: 'catalog_category_f1',
+        alias: 'lazy',
         option: {
           category: 'lustri',
           f1: 'vileberries'
@@ -34,7 +37,7 @@ export class HeaderComponent implements OnInit {
       name: 'Распродажа',
       selectorClass: 'green-text',
       link: {
-        alias: 'catalog_category_f1',
+        alias: 'main',
         option: {
           category: 'lustri',
           f1: 'maytoni'
@@ -45,7 +48,7 @@ export class HeaderComponent implements OnInit {
       name: 'Блог',
       selectorClass: 'black-text',
       link: {
-        alias: 'catalog_category',
+        alias: 'about',
         option: {
           category: 'lustri'
         }
@@ -55,19 +58,16 @@ export class HeaderComponent implements OnInit {
       name: 'Контакты',
       selectorClass: 'black-text',
       link: {
-        alias: 'catalog',
+        alias: 'main',
         option: {}
       }
     }
   ];
-
   constructor() {
   }
-  CliclActive(){
-    console.log('click')
-  }
-  ngOnInit() {
 
-    console.log('init')
+  sidenavOpen() {
+    this.sidenav.sidenavOpen();
   }
+  CliclActive() {}
 }

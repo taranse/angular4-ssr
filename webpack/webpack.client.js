@@ -1,5 +1,5 @@
 const {root} = require('./helpers');
-
+const path = require('path');
 const {AotPlugin}       = require('@ngtools/webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
@@ -7,6 +7,9 @@ const HtmlWebpackPlugin       = require('html-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const cssnano                 = require('cssnano');
 const ScriptExtPlugin         = require('script-ext-html-webpack-plugin');
+const { NoEmitOnErrorsPlugin, LoaderOptionsPlugin } = require('webpack');
+const { CommonsChunkPlugin } = require('webpack').optimize;
+const nodeModules = path.join(process.cwd(), 'node_modules');
 
 /**
  * This is a client config which should be merged on top of common config
@@ -14,7 +17,8 @@ const ScriptExtPlugin         = require('script-ext-html-webpack-plugin');
 module.exports = {
   entry: {
     "client": root('./src/main.browser.ts'),
-    "styles": root("./src/styles.scss")
+    "styles": root("./src/styles.scss"),
+    //"fonts": "https://fonts.googleapis.com/icon?family=Material+Icons"
   },
   output: {
     filename: '[name].js'
@@ -33,6 +37,7 @@ module.exports = {
       "filename": "[name].css",
       "disable": true
     }),
+
     new OptimizeCSSAssetsPlugin({
       cssProcessor: cssnano,
       cssProcessorOptions: {

@@ -12,7 +12,6 @@ import * as import4 from '@angular/common';
 import * as import5 from './globals/footer/footer.component.ngfactory';
 import * as import6 from '../../../app/globals/footer/footer.component';
 import * as import7 from '../../../app/app.component';
-import * as import8 from '../../../modules/transfer-state/transfer-state';
 var styles_AppComponent = [];
 export var RenderType_AppComponent = import0.ɵcrt({
     encapsulation: 2,
@@ -179,7 +178,7 @@ export function View_AppComponent_0(l) {
 function View_AppComponent_Host_0(l) {
     return import0.ɵvid(0, [
         (l()(), import0.ɵeld(0, null, null, 1, 'demo-app', [], null, null, null, View_AppComponent_0, RenderType_AppComponent)),
-        import0.ɵdid(57344, null, 0, import7.AppComponent, [import8.TransferState], null, null)
+        import0.ɵdid(57344, null, 0, import7.AppComponent, [], null, null)
     ], function (ck, v) {
         ck(v, 1, 0);
     }, null);

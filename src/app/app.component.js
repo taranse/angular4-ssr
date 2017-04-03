@@ -1,11 +1,8 @@
 import { Component } from '@angular/core';
-import { TransferState } from '../modules/transfer-state/transfer-state';
 var AppComponent = (function () {
-    function AppComponent(cache) {
-        this.cache = cache;
+    function AppComponent() {
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.cache.set('cached', true);
     };
     return AppComponent;
 }());
@@ -17,6 +14,4 @@ AppComponent.decorators = [
             },] },
 ];
 /** @nocollapse */
-AppComponent.ctorParameters = function () { return [
-    { type: TransferState, },
-]; };
+AppComponent.ctorParameters = function () { return []; };

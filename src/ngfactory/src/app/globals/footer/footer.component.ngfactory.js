@@ -35,7 +35,11 @@ export function View_FooterComponent_0(l) {
             ]
         ], null, null, null, null, null)),
         (l()(), import1.ɵted(null, ['\n        '])),
-        (l()(), import1.ɵeld(0, null, null, 1, 'h2', [], null, null, null, null, null)),
+        (l()(), import1.ɵeld(0, null, null, 1, 'h2', [[
+                'class',
+                'mar-0'
+            ]
+        ], null, null, null, null, null)),
         (l()(), import1.ɵted(null, ['Рассылка'])),
         (l()(), import1.ɵted(null, ['\n        '])),
         (l()(), import1.ɵeld(0, null, null, 3, 'p', [], null, null, null, null, null)),
