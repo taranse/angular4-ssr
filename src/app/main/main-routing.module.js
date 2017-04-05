@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { MainComponent } from './main.component';
 var routes = [
-    { path: '', component: MainComponent }
+    { path: '', component: MainComponent },
+    { path: '#main', component: MainComponent }
 ];
 var MainRoutingModule = (function () {
     function MainRoutingModule() {

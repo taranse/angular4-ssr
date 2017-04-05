@@ -37,9 +37,9 @@ class LazyModuleInjector extends import0.ɵNgModuleInjector<import1.LazyModule> 
   }
 }
 export const LazyModuleNgFactory:import0.NgModuleFactory<import1.LazyModule> = new import0.NgModuleFactory<any>(LazyModuleInjector,import1.LazyModule);
-const styles_LazyView:any[] = ([] as any[]);
+const styles_LazyView:any[] = ['*[_ngcontent-%COMP%] {color: red}'];
 export const RenderType_LazyView:import0.RendererType2 = import0.ɵcrt({
-  encapsulation: 2,
+  encapsulation: 0,
   styles: styles_LazyView,
   data: {}
 }

@@ -21,11 +21,19 @@ class MainRoutingModuleInjector extends import0.ɵNgModuleInjector<import1.MainR
   createInternal():import1.MainRoutingModule {
     this._RouterModule_0 = new import2.RouterModule(this.parent.get(import2.ɵa,(null as any)),this.parent.get(import2.Router,(null as any)));
     this._MainRoutingModule_1 = new import1.MainRoutingModule();
-        this._ROUTES_2 = [[{
+      this._ROUTES_2 = [[
+        {
           path: '',
           component: import4.MainComponent
         }
-    ]];
+        ,
+        {
+          path: '#main',
+          component: import4.MainComponent
+        }
+
+      ]
+    ];
     return this._MainRoutingModule_1;
   }
   getInternal(token:any,notFoundResult:any):any {
@@ -38,4 +46,4 @@ class MainRoutingModuleInjector extends import0.ɵNgModuleInjector<import1.MainR
   }
 }
 export const MainRoutingModuleNgFactory:import0.NgModuleFactory<import1.MainRoutingModule> = new import0.NgModuleFactory<any>(MainRoutingModuleInjector,import1.MainRoutingModule);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9tYWluL21haW4tcm91dGluZy5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9tYWluL21haW4tcm91dGluZy5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9tYWluL21haW4tcm91dGluZy5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9tYWluL21haW4tcm91dGluZy5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9

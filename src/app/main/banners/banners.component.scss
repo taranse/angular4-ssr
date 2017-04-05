@@ -1,0 +1,12 @@
+img {
+  width: 100%;
+}
+.banners-row {
+  margin: {left: -8px; right: -8px};
+  .banner{
+    padding: 8px;
+  }
+  &.banners-top .banner:nth-child(1)  {
+    padding-top: 0;
+  }
+}

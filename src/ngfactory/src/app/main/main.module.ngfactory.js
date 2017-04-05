@@ -18,23 +18,51 @@ import * as import0 from '@angular/core';
 import * as import1 from '../../../../app/main/main.module';
 import * as import2 from '@angular/router';
 import * as import3 from '../../../../app/main/main-routing.module';
-import * as import4 from './main.component.ngfactory';
-import * as import5 from '../../../../app/main/main.component';
+import * as import4 from '@angular/common';
+import * as import5 from '../../../../app/materials-bclight/mdb-nav/mdb-nav.module';
+import * as import6 from '../../../../app/materials-bclight/mdb-button/mdb-button.module';
+import * as import7 from '../../../../app/materials-bclight/mdb-sidenav/mdb-sidenav.module';
+import * as import8 from '../../../../app/materials-bclight/materials-bclight.module';
+import * as import9 from '../../../../app/globals/globals.module';
+import * as import10 from './main.component.ngfactory';
+import * as import11 from '../../../../app/main/main.component';
 var MainModuleInjector = (function (_super) {
     __extends(MainModuleInjector, _super);
     function MainModuleInjector(parent) {
-        return _super.call(this, parent, [import4.MainComponentNgFactory], []) || this;
+        return _super.call(this, parent, [import10.MainComponentNgFactory], []) || this;
     }
+    Object.defineProperty(MainModuleInjector.prototype, "_NgLocalization_10", {
+        get: function () {
+            if ((this.__NgLocalization_10 == null)) {
+                (this.__NgLocalization_10 = new import4.NgLocaleLocalization(this.parent.get(import0.LOCALE_ID)));
+            }
+            return this.__NgLocalization_10;
+        },
+        enumerable: true,
+        configurable: true
+    });
     MainModuleInjector.prototype.createInternal = function () {
         this._RouterModule_0 = new import2.RouterModule(this.parent.get(import2.ɵa, null), this.parent.get(import2.Router, null));
         this._MainRoutingModule_1 = new import3.MainRoutingModule();
-        this._MainModule_2 = new import1.MainModule();
-        this._ROUTES_3 = [[{
+        this._CommonModule_2 = new import4.CommonModule();
+        this._MdbNavModule_3 = new import5.MdbNavModule();
+        this._MdbButtonModule_4 = new import6.MdbButtonModule();
+        this._MdbSidenavModule_5 = new import7.MdbSidenavModule();
+        this._MaterialsBclightModule_6 = new import8.MaterialsBclightModule();
+        this._GlobalsModule_7 = new import9.GlobalsModule();
+        this._MainModule_8 = new import1.MainModule();
+        this._ROUTES_9 = [[
+                {
                     path: '',
-                    component: import5.MainComponent
+                    component: import11.MainComponent
+                },
+                {
+                    path: '#main',
+                    component: import11.MainComponent
                 }
-            ]];
-        return this._MainModule_2;
+            ]
+        ];
+        return this._MainModule_8;
     };
     MainModuleInjector.prototype.getInternal = function (token, notFoundResult) {
         if ((token === import2.RouterModule)) {
@@ -43,11 +71,32 @@ var MainModuleInjector = (function (_super) {
         if ((token === import3.MainRoutingModule)) {
             return this._MainRoutingModule_1;
         }
+        if ((token === import4.CommonModule)) {
+            return this._CommonModule_2;
+        }
+        if ((token === import5.MdbNavModule)) {
+            return this._MdbNavModule_3;
+        }
+        if ((token === import6.MdbButtonModule)) {
+            return this._MdbButtonModule_4;
+        }
+        if ((token === import7.MdbSidenavModule)) {
+            return this._MdbSidenavModule_5;
+        }
+        if ((token === import8.MaterialsBclightModule)) {
+            return this._MaterialsBclightModule_6;
+        }
+        if ((token === import9.GlobalsModule)) {
+            return this._GlobalsModule_7;
+        }
         if ((token === import1.MainModule)) {
-            return this._MainModule_2;
+            return this._MainModule_8;
         }
         if ((token === import2.ROUTES)) {
-            return this._ROUTES_3;
+            return this._ROUTES_9;
+        }
+        if ((token === import4.NgLocalization)) {
+            return this._NgLocalization_10;
         }
         return notFoundResult;
     };

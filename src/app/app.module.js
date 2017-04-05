@@ -1,12 +1,14 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
-import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { HomeView } from './home/home-view.component';
 import { TransferHttpModule } from '../modules/transfer-http/transfer-http.module';
 import { FooterComponent } from './globals/footer/footer.component';
 import { HeaderComponent } from './globals/header/header.component';
+import { MaterialsBclightModule } from './materials-bclight/materials-bclight.module';
+import { AppRoutingModule } from './app-routing.module';
+import { GlobalsModule } from './globals/globals.module';
 var AppModule = (function () {
     function AppModule() {
     }
@@ -18,15 +20,14 @@ AppModule.decorators = [
                 imports: [
                     CommonModule,
                     HttpModule,
+                    MaterialsBclightModule,
                     TransferHttpModule,
-                    RouterModule.forRoot([
-                        { path: '', component: HomeView, pathMatch: 'full' },
-                        { path: 'lazy', loadChildren: './+lazy/lazy.module#LazyModule' },
-                        { path: 'main', loadChildren: './main/main.module#MainModule' }
-                    ])
+                    AppRoutingModule,
+                    GlobalsModule
                 ],
                 declarations: [AppComponent, HomeView, FooterComponent, HeaderComponent],
-                exports: [AppComponent]
+                exports: [AppComponent],
+                schemas: [CUSTOM_ELEMENTS_SCHEMA]
             },] },
 ];
 /** @nocollapse */

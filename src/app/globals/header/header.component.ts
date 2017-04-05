@@ -37,7 +37,7 @@ export class HeaderComponent {
       name: 'Распродажа',
       selectorClass: 'green-text',
       link: {
-        alias: 'main',
+        alias: '/#main',
         option: {
           category: 'lustri',
           f1: 'maytoni'
@@ -58,7 +58,7 @@ export class HeaderComponent {
       name: 'Контакты',
       selectorClass: 'black-text',
       link: {
-        alias: 'main',
+        alias: '',
         option: {}
       }
     }

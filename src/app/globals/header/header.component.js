@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 var HeaderComponent = (function () {
     function HeaderComponent() {
         this.phones = {
@@ -18,7 +18,7 @@ var HeaderComponent = (function () {
                 name: 'Доставка/Оплата',
                 selectorClass: 'black-text',
                 link: {
-                    alias: 'catalog_category_f1',
+                    alias: 'lazy',
                     option: {
                         category: 'lustri',
                         f1: 'vileberries'
@@ -29,7 +29,7 @@ var HeaderComponent = (function () {
                 name: 'Распродажа',
                 selectorClass: 'green-text',
                 link: {
-                    alias: 'catalog_category_f1',
+                    alias: '/#main',
                     option: {
                         category: 'lustri',
                         f1: 'maytoni'
@@ -40,7 +40,7 @@ var HeaderComponent = (function () {
                 name: 'Блог',
                 selectorClass: 'black-text',
                 link: {
-                    alias: 'catalog_category',
+                    alias: 'about',
                     option: {
                         category: 'lustri'
                     }
@@ -50,18 +50,16 @@ var HeaderComponent = (function () {
                 name: 'Контакты',
                 selectorClass: 'black-text',
                 link: {
-                    alias: 'catalog',
+                    alias: '',
                     option: {}
                 }
             }
         ];
     }
-    HeaderComponent.prototype.CliclActive = function () {
-        console.log('click');
+    HeaderComponent.prototype.sidenavOpen = function () {
+        this.sidenav.sidenavOpen();
     };
-    HeaderComponent.prototype.ngOnInit = function () {
-        console.log('init');
-    };
+    HeaderComponent.prototype.CliclActive = function () { };
     return HeaderComponent;
 }());
 export { HeaderComponent };
@@ -74,3 +72,6 @@ HeaderComponent.decorators = [
 ];
 /** @nocollapse */
 HeaderComponent.ctorParameters = function () { return []; };
+HeaderComponent.propDecorators = {
+    'sidenav': [{ type: ViewChild, args: ['sidenav',] },],
+};

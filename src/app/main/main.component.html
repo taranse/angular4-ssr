@@ -1,1 +1,92 @@
-<app-banners></app-banners>
+<div class="middle md-padding side">
+  <app-banners></app-banners>
+</div>
+<div class="mar-16"></div>
+
+<app-items-block id="news_items">
+  <h2 class="light white-text header-component title mar-0">Новинки месяца</h2>
+  <div class="header-component paragraph">более 777 новинок</div>
+  <div class="items layout-row layout-wrap">
+    <app-item-card class="flex-25 md-padding flex-xs-50" *ngFor="let item of [1,2,3,4]"> <!--TODO добавить .side когда будет слайдер-->
+      <span class="category">Подвесной светильник</span>
+      <span class="name">Lightstar 803041</span>
+      <span class="series">Коллеция:<span class="regular"> Pentolla</span></span>
+      <mdb-button class="green btn action">Подробнее</mdb-button>
+    </app-item-card>
+  </div>
+</app-items-block>
+
+<div class="middle md-padding over">
+  <app-seo-text>
+    <h1 class="roboto-regular header1">{{title}}</h1>
+    <p class="roboto-light paragraph-header1" [innerHTML]="text"></p>
+  </app-seo-text>
+</div>
+<div class="mar-16"></div>
+
+<app-items-block id="sales_items">
+  <h2 class="light white-text header-component title mar-0">Распродажа</h2>
+  <div class="header-component paragraph">1253 товара со сниженной ценой</div>
+  <div class="items layout-row layout-wrap">
+    <app-item-card class="flex-25 md-padding flex-xs-50" *ngFor="let item of [1,2,3,4]"> <!--TODO добавить .side когда будет слайдер-->
+      <span class="category">Подвесной светильник</span>
+      <span class="name">Lightstar 803041</span>
+      <span class="series">Коллеция:<span class="regular"> Pentolla</span></span>
+      <mdb-button class="red btn action layout-row layout-align-center-center"><i class="material-icons left">shopping_cart</i>Купить</mdb-button>
+    </app-item-card>
+  </div>
+</app-items-block>
+
+<app-items-block id="recommend_items">
+  <h2 class="light white-text header-component title mar-0">Рекомендации</h2>
+  <div class="header-component paragraph">1253 товара со сниженной ценой</div>
+  <div class="items layout-row layout-wrap">
+    <app-item-card class="flex-25 md-padding flex-xs-50" *ngFor="let item of [1,2,3,4]"> <!--TODO добавить .side когда будет слайдер-->
+      <span class="category">Подвесной светильник</span>
+      <span class="name">Lightstar 803041</span>
+      <span class="series">Коллеция:<span class="regular"> Pentolla</span></span>
+      <mdb-button class="green btn action">Подробнее</mdb-button>
+    </app-item-card>
+  </div>
+</app-items-block>
+<app-news-anonce [list]="newsAnnounceList"></app-news-anonce>
+<app-items-block id="factories_items">
+  <h2 class="light white-text header-component title mar-0">Фабрики</h2>
+  <div class="header-component paragraph">315 фабрик из 18 стран</div>
+  <div class="items">
+    <div class="item-card-container layout-row layout-align-center-stretch layout-wrap">
+      <div class="flex-50 flex-md-80 flex-sm-30 layout-row layout-align-center-stretch layout-wrap" *ngFor="let n of [0,1,2,3,4]">
+        <div class="md-padding flex-gt-sm-33 flex-sm-100" *ngFor="let factory of factoriesList.slice((n*3),(n*3+3))">
+          <div>
+            <a routerLink="/">
+              <img class="img-max" [src]="factory.image"/>
+            <div class="md-padding grey lighten-4 black-text">{{factory.title}}<br/>
+              <div class="md-caption grey-text text-darken-1">{{factory.shortDesc}}</div>
+            </div>
+          </a></div>
+        </div>
+      </div>
+      <div class="flex-50 flex-md-80 flex-sm-30 layout-row layout-wrap layout-align-center-stretch">
+        <div class="md-padding flex-gt-sm-33 flex-sm-100" *ngFor=" let factory of factoriesList.slice(15,17)">
+          <div>
+            <a routerLink="/"><img class="img-max" [src]="factory.image"/>
+            <div class="md-padding grey lighten-4 black-text">{{factory.title}}<br/>
+              <div class="md-caption grey-text text-darken-1">{{factory.shortDesc}}</div>
+            </div>
+          </a></div>
+        </div>
+        <div class="md-padding relative flex-gt-sm-33 flex-sm-100 layout-column layout-align-stretch-stretch">
+          <a class="green lighten-1 block" routerLink="/">
+          <div class="opacity-0"><img class="img-max" [src]="factoriesList[17].image"/>
+            <div class="md-padding grey lighten-4">{{factoriesList[17].title}}<br/>
+              <div class="md-caption grey-text text-darken-1">{{factoriesList[17].shortDesc}}</div>
+            </div>
+          </div>
+          <div class="absolute center white-text md-title regular">
+            <div class="text center">Еще 218 фабрик</div>
+          </div>
+        </a></div>
+      </div>
+    </div>
+  </div>
+</app-items-block>

@@ -11,15 +11,21 @@ import * as import1 from '../../../app/browser-app.module';
 import * as import2 from '@angular/common';
 import * as import3 from '@angular/router';
 import * as import4 from '@angular/platform-browser';
-import * as import5 from '../../../modules/transfer-state/browser-transfer-state.module';
-import * as import6 from '@angular/http';
-import * as import7 from '../../../modules/transfer-http/transfer-http.module';
-import * as import8 from '../../../app/app.module';
-import * as import9 from '../../../modules/transfer-http/transfer-http';
-import * as import10 from './home/home-view.component.ngfactory';
-import * as import11 from './app.component.ngfactory';
-import * as import12 from '../../../app/home/home-view.component';
-import * as import13 from '../../../modules/transfer-state/transfer-state';
+import * as import5 from '@angular/platform-browser/animations';
+import * as import6 from '../../../modules/transfer-state/browser-transfer-state.module';
+import * as import7 from '@angular/http';
+import * as import8 from '../../../app/materials-bclight/mdb-nav/mdb-nav.module';
+import * as import9 from '../../../app/materials-bclight/mdb-button/mdb-button.module';
+import * as import10 from '../../../app/materials-bclight/mdb-sidenav/mdb-sidenav.module';
+import * as import11 from '../../../app/materials-bclight/materials-bclight.module';
+import * as import12 from '../../../modules/transfer-http/transfer-http.module';
+import * as import13 from '../../../app/app-routing.module';
+import * as import14 from '../../../app/globals/globals.module';
+import * as import15 from '../../../app/app.module';
+import * as import16 from '../../../modules/transfer-http/transfer-http';
+import * as import17 from './app.component.ngfactory';
+import * as import18 from '@angular/animations/browser';
+import * as import19 from '../../../modules/transfer-state/transfer-state';
 class BrowserAppModuleInjector extends import0.ɵNgModuleInjector<import1.BrowserAppModule> {
   _CommonModule_0:import2.CommonModule;
   _ErrorHandler_1:any;
@@ -33,188 +39,206 @@ class BrowserAppModuleInjector extends import0.ɵNgModuleInjector<import1.Browse
   _ApplicationRef_9:any;
   _ApplicationModule_10:import0.ApplicationModule;
   _BrowserModule_11:import4.BrowserModule;
-  _BrowserTransferStateModule_12:import5.BrowserTransferStateModule;
-  _HttpModule_13:import6.HttpModule;
-  _TransferHttpModule_14:import7.TransferHttpModule;
-  _ɵa_15:any;
-  _UrlSerializer_16:import3.DefaultUrlSerializer;
-  _RouterOutletMap_17:import3.RouterOutletMap;
-  _ROUTER_CONFIGURATION_18:any;
-  _LocationStrategy_19:any;
-  _Location_20:import2.Location;
-  _Compiler_21:import0.Compiler;
-  _NgModuleFactoryLoader_22:import0.SystemJsNgModuleLoader;
-  _ROUTES_23:any[];
-  _Router_24:any;
-  _RouterModule_25:import3.RouterModule;
-  _AppModule_26:import8.AppModule;
-  _BrowserAppModule_27:import1.BrowserAppModule;
-  __LOCALE_ID_28:any;
-  __NgLocalization_29:import2.NgLocaleLocalization;
-  __IterableDiffers_30:any;
-  __KeyValueDiffers_31:any;
-  __DomSanitizer_32:import4.ɵe;
-  __Sanitizer_33:any;
-  __HAMMER_GESTURE_CONFIG_34:import4.HammerGestureConfig;
-  __EVENT_MANAGER_PLUGINS_35:any[];
-  __EventManager_36:import4.EventManager;
-  __ɵDomSharedStylesHost_37:import4.ɵDomSharedStylesHost;
-  __ɵDomRendererFactory2_38:import4.ɵDomRendererFactory2;
-  __RendererFactory2_39:any;
-  __ɵSharedStylesHost_40:any;
-  __Testability_41:import0.Testability;
-  __Meta_42:import4.Meta;
-  __Title_43:import4.Title;
-  __TransferState_44:any;
-  __BrowserXhr_45:import6.BrowserXhr;
-  __ResponseOptions_46:import6.BaseResponseOptions;
-  __XSRFStrategy_47:any;
-  __XHRBackend_48:import6.XHRBackend;
-  __RequestOptions_49:import6.BaseRequestOptions;
-  __Http_50:any;
-  __TransferHttp_51:import9.TransferHttp;
-  __ActivatedRoute_52:any;
-  __NoPreloading_53:import3.NoPreloading;
-  __PreloadingStrategy_54:any;
-  __RouterPreloader_55:import3.RouterPreloader;
-  __PreloadAllModules_56:import3.PreloadAllModules;
-  __ROUTER_INITIALIZER_57:any;
-  __APP_BOOTSTRAP_LISTENER_58:any[];
+  _BrowserAnimationsModule_12:import5.BrowserAnimationsModule;
+  _BrowserTransferStateModule_13:import6.BrowserTransferStateModule;
+  _HttpModule_14:import7.HttpModule;
+  _MdbNavModule_15:import8.MdbNavModule;
+  _MdbButtonModule_16:import9.MdbButtonModule;
+  _MdbSidenavModule_17:import10.MdbSidenavModule;
+  _MaterialsBclightModule_18:import11.MaterialsBclightModule;
+  _TransferHttpModule_19:import12.TransferHttpModule;
+  _ɵa_20:any;
+  _UrlSerializer_21:import3.DefaultUrlSerializer;
+  _RouterOutletMap_22:import3.RouterOutletMap;
+  _ROUTER_CONFIGURATION_23:any;
+  _LocationStrategy_24:any;
+  _Location_25:import2.Location;
+  _Compiler_26:import0.Compiler;
+  _NgModuleFactoryLoader_27:import0.SystemJsNgModuleLoader;
+  _ROUTES_28:any[];
+  _Router_29:any;
+  _RouterModule_30:import3.RouterModule;
+  _AppRoutingModule_31:import13.AppRoutingModule;
+  _GlobalsModule_32:import14.GlobalsModule;
+  _AppModule_33:import15.AppModule;
+  _BrowserAppModule_34:import1.BrowserAppModule;
+  __LOCALE_ID_35:any;
+  __NgLocalization_36:import2.NgLocaleLocalization;
+  __IterableDiffers_37:any;
+  __KeyValueDiffers_38:any;
+  __DomSanitizer_39:import4.ɵe;
+  __Sanitizer_40:any;
+  __HAMMER_GESTURE_CONFIG_41:import4.HammerGestureConfig;
+  __EVENT_MANAGER_PLUGINS_42:any[];
+  __EventManager_43:import4.EventManager;
+  __ɵDomSharedStylesHost_44:import4.ɵDomSharedStylesHost;
+  __ɵDomRendererFactory2_45:import4.ɵDomRendererFactory2;
+  __AnimationDriver_46:any;
+  __ɵAnimationStyleNormalizer_47:any;
+  __ɵAnimationEngine_48:import5.ɵa;
+  __RendererFactory2_49:any;
+  __ɵSharedStylesHost_50:any;
+  __Testability_51:import0.Testability;
+  __Meta_52:import4.Meta;
+  __Title_53:import4.Title;
+  __TransferState_54:any;
+  __BrowserXhr_55:import7.BrowserXhr;
+  __ResponseOptions_56:import7.BaseResponseOptions;
+  __XSRFStrategy_57:any;
+  __XHRBackend_58:import7.XHRBackend;
+  __RequestOptions_59:import7.BaseRequestOptions;
+  __Http_60:any;
+  __TransferHttp_61:import16.TransferHttp;
+  __ActivatedRoute_62:any;
+  __NoPreloading_63:import3.NoPreloading;
+  __PreloadingStrategy_64:any;
+  __RouterPreloader_65:import3.RouterPreloader;
+  __PreloadAllModules_66:import3.PreloadAllModules;
+  __ROUTER_INITIALIZER_67:any;
+  __APP_BOOTSTRAP_LISTENER_68:any[];
   constructor(parent:import0.Injector) {
-    super(parent,[
-      import10.HomeViewNgFactory,
-      import11.AppComponentNgFactory
-    ]
-    ,[import11.AppComponentNgFactory]);
+    super(parent,[import17.AppComponentNgFactory],[import17.AppComponentNgFactory]);
   }
-  get _LOCALE_ID_28():any {
-    if ((this.__LOCALE_ID_28 == null)) { (this.__LOCALE_ID_28 = import0.ɵn(this.parent.get(import0.LOCALE_ID,(null as any)))); }
-    return this.__LOCALE_ID_28;
+  get _LOCALE_ID_35():any {
+    if ((this.__LOCALE_ID_35 == null)) { (this.__LOCALE_ID_35 = import0.ɵn(this.parent.get(import0.LOCALE_ID,(null as any)))); }
+    return this.__LOCALE_ID_35;
   }
-  get _NgLocalization_29():import2.NgLocaleLocalization {
-    if ((this.__NgLocalization_29 == null)) { (this.__NgLocalization_29 = new import2.NgLocaleLocalization(this._LOCALE_ID_28)); }
-    return this.__NgLocalization_29;
+  get _NgLocalization_36():import2.NgLocaleLocalization {
+    if ((this.__NgLocalization_36 == null)) { (this.__NgLocalization_36 = new import2.NgLocaleLocalization(this._LOCALE_ID_35)); }
+    return this.__NgLocalization_36;
   }
-  get _IterableDiffers_30():any {
-    if ((this.__IterableDiffers_30 == null)) { (this.__IterableDiffers_30 = import0.ɵl()); }
-    return this.__IterableDiffers_30;
+  get _IterableDiffers_37():any {
+    if ((this.__IterableDiffers_37 == null)) { (this.__IterableDiffers_37 = import0.ɵl()); }
+    return this.__IterableDiffers_37;
   }
-  get _KeyValueDiffers_31():any {
-    if ((this.__KeyValueDiffers_31 == null)) { (this.__KeyValueDiffers_31 = import0.ɵm()); }
-    return this.__KeyValueDiffers_31;
+  get _KeyValueDiffers_38():any {
+    if ((this.__KeyValueDiffers_38 == null)) { (this.__KeyValueDiffers_38 = import0.ɵm()); }
+    return this.__KeyValueDiffers_38;
   }
-  get _DomSanitizer_32():import4.ɵe {
-    if ((this.__DomSanitizer_32 == null)) { (this.__DomSanitizer_32 = new import4.ɵe(this.parent.get(import4.DOCUMENT))); }
-    return this.__DomSanitizer_32;
+  get _DomSanitizer_39():import4.ɵe {
+    if ((this.__DomSanitizer_39 == null)) { (this.__DomSanitizer_39 = new import4.ɵe(this.parent.get(import4.DOCUMENT))); }
+    return this.__DomSanitizer_39;
   }
-  get _Sanitizer_33():any {
-    if ((this.__Sanitizer_33 == null)) { (this.__Sanitizer_33 = this._DomSanitizer_32); }
-    return this.__Sanitizer_33;
+  get _Sanitizer_40():any {
+    if ((this.__Sanitizer_40 == null)) { (this.__Sanitizer_40 = this._DomSanitizer_39); }
+    return this.__Sanitizer_40;
   }
-  get _HAMMER_GESTURE_CONFIG_34():import4.HammerGestureConfig {
-    if ((this.__HAMMER_GESTURE_CONFIG_34 == null)) { (this.__HAMMER_GESTURE_CONFIG_34 = new import4.HammerGestureConfig()); }
-    return this.__HAMMER_GESTURE_CONFIG_34;
+  get _HAMMER_GESTURE_CONFIG_41():import4.HammerGestureConfig {
+    if ((this.__HAMMER_GESTURE_CONFIG_41 == null)) { (this.__HAMMER_GESTURE_CONFIG_41 = new import4.HammerGestureConfig()); }
+    return this.__HAMMER_GESTURE_CONFIG_41;
   }
-  get _EVENT_MANAGER_PLUGINS_35():any[] {
-    if ((this.__EVENT_MANAGER_PLUGINS_35 == null)) { (this.__EVENT_MANAGER_PLUGINS_35 = [
+  get _EVENT_MANAGER_PLUGINS_42():any[] {
+    if ((this.__EVENT_MANAGER_PLUGINS_42 == null)) { (this.__EVENT_MANAGER_PLUGINS_42 = [
       new import4.ɵDomEventsPlugin(this.parent.get(import4.DOCUMENT)),
       new import4.ɵKeyEventsPlugin(this.parent.get(import4.DOCUMENT)),
-      new import4.ɵHammerGesturesPlugin(this.parent.get(import4.DOCUMENT),this._HAMMER_GESTURE_CONFIG_34)
+      new import4.ɵHammerGesturesPlugin(this.parent.get(import4.DOCUMENT),this._HAMMER_GESTURE_CONFIG_41)
     ]
     ); }
-    return this.__EVENT_MANAGER_PLUGINS_35;
+    return this.__EVENT_MANAGER_PLUGINS_42;
   }
-  get _EventManager_36():import4.EventManager {
-    if ((this.__EventManager_36 == null)) { (this.__EventManager_36 = new import4.EventManager(this._EVENT_MANAGER_PLUGINS_35,this.parent.get(import0.NgZone))); }
-    return this.__EventManager_36;
+  get _EventManager_43():import4.EventManager {
+    if ((this.__EventManager_43 == null)) { (this.__EventManager_43 = new import4.EventManager(this._EVENT_MANAGER_PLUGINS_42,this.parent.get(import0.NgZone))); }
+    return this.__EventManager_43;
   }
-  get _ɵDomSharedStylesHost_37():import4.ɵDomSharedStylesHost {
-    if ((this.__ɵDomSharedStylesHost_37 == null)) { (this.__ɵDomSharedStylesHost_37 = new import4.ɵDomSharedStylesHost(this.parent.get(import4.DOCUMENT))); }
-    return this.__ɵDomSharedStylesHost_37;
+  get _ɵDomSharedStylesHost_44():import4.ɵDomSharedStylesHost {
+    if ((this.__ɵDomSharedStylesHost_44 == null)) { (this.__ɵDomSharedStylesHost_44 = new import4.ɵDomSharedStylesHost(this.parent.get(import4.DOCUMENT))); }
+    return this.__ɵDomSharedStylesHost_44;
   }
-  get _ɵDomRendererFactory2_38():import4.ɵDomRendererFactory2 {
-    if ((this.__ɵDomRendererFactory2_38 == null)) { (this.__ɵDomRendererFactory2_38 = new import4.ɵDomRendererFactory2(this._EventManager_36,this._ɵDomSharedStylesHost_37)); }
-    return this.__ɵDomRendererFactory2_38;
+  get _ɵDomRendererFactory2_45():import4.ɵDomRendererFactory2 {
+    if ((this.__ɵDomRendererFactory2_45 == null)) { (this.__ɵDomRendererFactory2_45 = new import4.ɵDomRendererFactory2(this._EventManager_43,this._ɵDomSharedStylesHost_44)); }
+    return this.__ɵDomRendererFactory2_45;
   }
-  get _RendererFactory2_39():any {
-    if ((this.__RendererFactory2_39 == null)) { (this.__RendererFactory2_39 = this._ɵDomRendererFactory2_38); }
-    return this.__RendererFactory2_39;
+  get _AnimationDriver_46():any {
+    if ((this.__AnimationDriver_46 == null)) { (this.__AnimationDriver_46 = import5.ɵb()); }
+    return this.__AnimationDriver_46;
   }
-  get _ɵSharedStylesHost_40():any {
-    if ((this.__ɵSharedStylesHost_40 == null)) { (this.__ɵSharedStylesHost_40 = this._ɵDomSharedStylesHost_37); }
-    return this.__ɵSharedStylesHost_40;
+  get _ɵAnimationStyleNormalizer_47():any {
+    if ((this.__ɵAnimationStyleNormalizer_47 == null)) { (this.__ɵAnimationStyleNormalizer_47 = import5.ɵc()); }
+    return this.__ɵAnimationStyleNormalizer_47;
   }
-  get _Testability_41():import0.Testability {
-    if ((this.__Testability_41 == null)) { (this.__Testability_41 = new import0.Testability(this.parent.get(import0.NgZone))); }
-    return this.__Testability_41;
+  get _ɵAnimationEngine_48():import5.ɵa {
+    if ((this.__ɵAnimationEngine_48 == null)) { (this.__ɵAnimationEngine_48 = new import5.ɵa(this._AnimationDriver_46,this._ɵAnimationStyleNormalizer_47)); }
+    return this.__ɵAnimationEngine_48;
   }
-  get _Meta_42():import4.Meta {
-    if ((this.__Meta_42 == null)) { (this.__Meta_42 = new import4.Meta(this.parent.get(import4.DOCUMENT))); }
-    return this.__Meta_42;
+  get _RendererFactory2_49():any {
+    if ((this.__RendererFactory2_49 == null)) { (this.__RendererFactory2_49 = import5.ɵd(this._ɵDomRendererFactory2_45,this._ɵAnimationEngine_48,this.parent.get(import0.NgZone))); }
+    return this.__RendererFactory2_49;
   }
-  get _Title_43():import4.Title {
-    if ((this.__Title_43 == null)) { (this.__Title_43 = new import4.Title(this.parent.get(import4.DOCUMENT))); }
-    return this.__Title_43;
+  get _ɵSharedStylesHost_50():any {
+    if ((this.__ɵSharedStylesHost_50 == null)) { (this.__ɵSharedStylesHost_50 = this._ɵDomSharedStylesHost_44); }
+    return this.__ɵSharedStylesHost_50;
   }
-  get _TransferState_44():any {
-    if ((this.__TransferState_44 == null)) { (this.__TransferState_44 = import5.getTransferState()); }
-    return this.__TransferState_44;
+  get _Testability_51():import0.Testability {
+    if ((this.__Testability_51 == null)) { (this.__Testability_51 = new import0.Testability(this.parent.get(import0.NgZone))); }
+    return this.__Testability_51;
   }
-  get _BrowserXhr_45():import6.BrowserXhr {
-    if ((this.__BrowserXhr_45 == null)) { (this.__BrowserXhr_45 = new import6.BrowserXhr()); }
-    return this.__BrowserXhr_45;
+  get _Meta_52():import4.Meta {
+    if ((this.__Meta_52 == null)) { (this.__Meta_52 = new import4.Meta(this.parent.get(import4.DOCUMENT))); }
+    return this.__Meta_52;
   }
-  get _ResponseOptions_46():import6.BaseResponseOptions {
-    if ((this.__ResponseOptions_46 == null)) { (this.__ResponseOptions_46 = new import6.BaseResponseOptions()); }
-    return this.__ResponseOptions_46;
+  get _Title_53():import4.Title {
+    if ((this.__Title_53 == null)) { (this.__Title_53 = new import4.Title(this.parent.get(import4.DOCUMENT))); }
+    return this.__Title_53;
   }
-  get _XSRFStrategy_47():any {
-    if ((this.__XSRFStrategy_47 == null)) { (this.__XSRFStrategy_47 = import6.ɵb()); }
-    return this.__XSRFStrategy_47;
+  get _TransferState_54():any {
+    if ((this.__TransferState_54 == null)) { (this.__TransferState_54 = import6.getTransferState()); }
+    return this.__TransferState_54;
   }
-  get _XHRBackend_48():import6.XHRBackend {
-    if ((this.__XHRBackend_48 == null)) { (this.__XHRBackend_48 = new import6.XHRBackend(this._BrowserXhr_45,this._ResponseOptions_46,this._XSRFStrategy_47)); }
-    return this.__XHRBackend_48;
+  get _BrowserXhr_55():import7.BrowserXhr {
+    if ((this.__BrowserXhr_55 == null)) { (this.__BrowserXhr_55 = new import7.BrowserXhr()); }
+    return this.__BrowserXhr_55;
   }
-  get _RequestOptions_49():import6.BaseRequestOptions {
-    if ((this.__RequestOptions_49 == null)) { (this.__RequestOptions_49 = new import6.BaseRequestOptions()); }
-    return this.__RequestOptions_49;
+  get _ResponseOptions_56():import7.BaseResponseOptions {
+    if ((this.__ResponseOptions_56 == null)) { (this.__ResponseOptions_56 = new import7.BaseResponseOptions()); }
+    return this.__ResponseOptions_56;
   }
-  get _Http_50():any {
-    if ((this.__Http_50 == null)) { (this.__Http_50 = import6.ɵc(this._XHRBackend_48,this._RequestOptions_49)); }
-    return this.__Http_50;
+  get _XSRFStrategy_57():any {
+    if ((this.__XSRFStrategy_57 == null)) { (this.__XSRFStrategy_57 = import7.ɵb()); }
+    return this.__XSRFStrategy_57;
   }
-  get _TransferHttp_51():import9.TransferHttp {
-    if ((this.__TransferHttp_51 == null)) { (this.__TransferHttp_51 = new import9.TransferHttp(this._Http_50,this._TransferState_44)); }
-    return this.__TransferHttp_51;
+  get _XHRBackend_58():import7.XHRBackend {
+    if ((this.__XHRBackend_58 == null)) { (this.__XHRBackend_58 = new import7.XHRBackend(this._BrowserXhr_55,this._ResponseOptions_56,this._XSRFStrategy_57)); }
+    return this.__XHRBackend_58;
   }
-  get _ActivatedRoute_52():any {
-    if ((this.__ActivatedRoute_52 == null)) { (this.__ActivatedRoute_52 = import3.ɵf(this._Router_24)); }
-    return this.__ActivatedRoute_52;
+  get _RequestOptions_59():import7.BaseRequestOptions {
+    if ((this.__RequestOptions_59 == null)) { (this.__RequestOptions_59 = new import7.BaseRequestOptions()); }
+    return this.__RequestOptions_59;
   }
-  get _NoPreloading_53():import3.NoPreloading {
-    if ((this.__NoPreloading_53 == null)) { (this.__NoPreloading_53 = new import3.NoPreloading()); }
-    return this.__NoPreloading_53;
+  get _Http_60():any {
+    if ((this.__Http_60 == null)) { (this.__Http_60 = import7.ɵc(this._XHRBackend_58,this._RequestOptions_59)); }
+    return this.__Http_60;
   }
-  get _PreloadingStrategy_54():any {
-    if ((this.__PreloadingStrategy_54 == null)) { (this.__PreloadingStrategy_54 = this._NoPreloading_53); }
-    return this.__PreloadingStrategy_54;
+  get _TransferHttp_61():import16.TransferHttp {
+    if ((this.__TransferHttp_61 == null)) { (this.__TransferHttp_61 = new import16.TransferHttp(this._Http_60,this._TransferState_54)); }
+    return this.__TransferHttp_61;
   }
-  get _RouterPreloader_55():import3.RouterPreloader {
-    if ((this.__RouterPreloader_55 == null)) { (this.__RouterPreloader_55 = new import3.RouterPreloader(this._Router_24,this._NgModuleFactoryLoader_22,this._Compiler_21,this,this._PreloadingStrategy_54)); }
-    return this.__RouterPreloader_55;
+  get _ActivatedRoute_62():any {
+    if ((this.__ActivatedRoute_62 == null)) { (this.__ActivatedRoute_62 = import3.ɵf(this._Router_29)); }
+    return this.__ActivatedRoute_62;
   }
-  get _PreloadAllModules_56():import3.PreloadAllModules {
-    if ((this.__PreloadAllModules_56 == null)) { (this.__PreloadAllModules_56 = new import3.PreloadAllModules()); }
-    return this.__PreloadAllModules_56;
+  get _NoPreloading_63():import3.NoPreloading {
+    if ((this.__NoPreloading_63 == null)) { (this.__NoPreloading_63 = new import3.NoPreloading()); }
+    return this.__NoPreloading_63;
   }
-  get _ROUTER_INITIALIZER_57():any {
-    if ((this.__ROUTER_INITIALIZER_57 == null)) { (this.__ROUTER_INITIALIZER_57 = import3.ɵi(this._ɵg_3)); }
-    return this.__ROUTER_INITIALIZER_57;
+  get _PreloadingStrategy_64():any {
+    if ((this.__PreloadingStrategy_64 == null)) { (this.__PreloadingStrategy_64 = this._NoPreloading_63); }
+    return this.__PreloadingStrategy_64;
   }
-  get _APP_BOOTSTRAP_LISTENER_58():any[] {
-    if ((this.__APP_BOOTSTRAP_LISTENER_58 == null)) { (this.__APP_BOOTSTRAP_LISTENER_58 = [this._ROUTER_INITIALIZER_57]); }
-    return this.__APP_BOOTSTRAP_LISTENER_58;
+  get _RouterPreloader_65():import3.RouterPreloader {
+    if ((this.__RouterPreloader_65 == null)) { (this.__RouterPreloader_65 = new import3.RouterPreloader(this._Router_29,this._NgModuleFactoryLoader_27,this._Compiler_26,this,this._PreloadingStrategy_64)); }
+    return this.__RouterPreloader_65;
+  }
+  get _PreloadAllModules_66():import3.PreloadAllModules {
+    if ((this.__PreloadAllModules_66 == null)) { (this.__PreloadAllModules_66 = new import3.PreloadAllModules()); }
+    return this.__PreloadAllModules_66;
+  }
+  get _ROUTER_INITIALIZER_67():any {
+    if ((this.__ROUTER_INITIALIZER_67 == null)) { (this.__ROUTER_INITIALIZER_67 = import3.ɵi(this._ɵg_3)); }
+    return this.__ROUTER_INITIALIZER_67;
+  }
+  get _APP_BOOTSTRAP_LISTENER_68():any[] {
+    if ((this.__APP_BOOTSTRAP_LISTENER_68 == null)) { (this.__APP_BOOTSTRAP_LISTENER_68 = [this._ROUTER_INITIALIZER_67]); }
+    return this.__APP_BOOTSTRAP_LISTENER_68;
   }
   createInternal():import1.BrowserAppModule {
     this._CommonModule_0 = new import2.CommonModule();
@@ -235,41 +259,47 @@ class BrowserAppModuleInjector extends import0.ɵNgModuleInjector<import1.Browse
     this._ApplicationRef_9 = this._ɵf_8;
     this._ApplicationModule_10 = new import0.ApplicationModule(this._ApplicationRef_9);
     this._BrowserModule_11 = new import4.BrowserModule(this.parent.get(import4.BrowserModule,(null as any)));
-    this._BrowserTransferStateModule_12 = new import5.BrowserTransferStateModule();
-    this._HttpModule_13 = new import6.HttpModule();
-    this._TransferHttpModule_14 = new import7.TransferHttpModule();
-    this._ɵa_15 = import3.ɵd(this.parent.get(import3.Router,(null as any)));
-    this._UrlSerializer_16 = new import3.DefaultUrlSerializer();
-    this._RouterOutletMap_17 = new import3.RouterOutletMap();
-    this._ROUTER_CONFIGURATION_18 = {};
-    this._LocationStrategy_19 = import3.ɵc(this.parent.get(import2.PlatformLocation),this.parent.get(import2.APP_BASE_HREF,(null as any)),this._ROUTER_CONFIGURATION_18);
-    this._Location_20 = new import2.Location(this._LocationStrategy_19);
-    this._Compiler_21 = new import0.Compiler();
-    this._NgModuleFactoryLoader_22 = new import0.SystemJsNgModuleLoader(this._Compiler_21,this.parent.get(import0.SystemJsNgModuleLoaderConfig,(null as any)));
-      this._ROUTES_23 = [[
-        {
-          path: '',
-          component: import12.HomeView,
-          pathMatch: 'full'
-        }
-        ,
+    this._BrowserAnimationsModule_12 = new import5.BrowserAnimationsModule();
+    this._BrowserTransferStateModule_13 = new import6.BrowserTransferStateModule();
+    this._HttpModule_14 = new import7.HttpModule();
+    this._MdbNavModule_15 = new import8.MdbNavModule();
+    this._MdbButtonModule_16 = new import9.MdbButtonModule();
+    this._MdbSidenavModule_17 = new import10.MdbSidenavModule();
+    this._MaterialsBclightModule_18 = new import11.MaterialsBclightModule();
+    this._TransferHttpModule_19 = new import12.TransferHttpModule();
+    this._ɵa_20 = import3.ɵd(this.parent.get(import3.Router,(null as any)));
+    this._UrlSerializer_21 = new import3.DefaultUrlSerializer();
+    this._RouterOutletMap_22 = new import3.RouterOutletMap();
+    this._ROUTER_CONFIGURATION_23 = {};
+    this._LocationStrategy_24 = import3.ɵc(this.parent.get(import2.PlatformLocation),this.parent.get(import2.APP_BASE_HREF,(null as any)),this._ROUTER_CONFIGURATION_23);
+    this._Location_25 = new import2.Location(this._LocationStrategy_24);
+    this._Compiler_26 = new import0.Compiler();
+    this._NgModuleFactoryLoader_27 = new import0.SystemJsNgModuleLoader(this._Compiler_26,this.parent.get(import0.SystemJsNgModuleLoaderConfig,(null as any)));
+      this._ROUTES_28 = [[
         {
           path: 'lazy',
           loadChildren: './+lazy/lazy.module#LazyModule'
         }
         ,
         {
-          path: 'main',
+          path: 'about',
+          loadChildren: './+lazy/lazy.module#LazyModule'
+        }
+        ,
+        {
+          path: '',
           loadChildren: './main/main.module#MainModule'
         }
 
       ]
     ];
-    this._Router_24 = import3.ɵe(this._ApplicationRef_9,this._UrlSerializer_16,this._RouterOutletMap_17,this._Location_20,this,this._NgModuleFactoryLoader_22,this._Compiler_21,this._ROUTES_23,this._ROUTER_CONFIGURATION_18,this.parent.get(import3.UrlHandlingStrategy,(null as any)),this.parent.get(import3.RouteReuseStrategy,(null as any)));
-    this._RouterModule_25 = new import3.RouterModule(this._ɵa_15,this._Router_24);
-    this._AppModule_26 = new import8.AppModule();
-    this._BrowserAppModule_27 = new import1.BrowserAppModule();
-    return this._BrowserAppModule_27;
+    this._Router_29 = import3.ɵe(this._ApplicationRef_9,this._UrlSerializer_21,this._RouterOutletMap_22,this._Location_25,this,this._NgModuleFactoryLoader_27,this._Compiler_26,this._ROUTES_28,this._ROUTER_CONFIGURATION_23,this.parent.get(import3.UrlHandlingStrategy,(null as any)),this.parent.get(import3.RouteReuseStrategy,(null as any)));
+    this._RouterModule_30 = new import3.RouterModule(this._ɵa_20,this._Router_29);
+    this._AppRoutingModule_31 = new import13.AppRoutingModule();
+    this._GlobalsModule_32 = new import14.GlobalsModule();
+    this._AppModule_33 = new import15.AppModule();
+    this._BrowserAppModule_34 = new import1.BrowserAppModule();
+    return this._BrowserAppModule_34;
   }
   getInternal(token:any,notFoundResult:any):any {
     if ((token === import2.CommonModule)) { return this._CommonModule_0; }
@@ -284,60 +314,70 @@ class BrowserAppModuleInjector extends import0.ɵNgModuleInjector<import1.Browse
     if ((token === import0.ApplicationRef)) { return this._ApplicationRef_9; }
     if ((token === import0.ApplicationModule)) { return this._ApplicationModule_10; }
     if ((token === import4.BrowserModule)) { return this._BrowserModule_11; }
-    if ((token === import5.BrowserTransferStateModule)) { return this._BrowserTransferStateModule_12; }
-    if ((token === import6.HttpModule)) { return this._HttpModule_13; }
-    if ((token === import7.TransferHttpModule)) { return this._TransferHttpModule_14; }
-    if ((token === import3.ɵa)) { return this._ɵa_15; }
-    if ((token === import3.UrlSerializer)) { return this._UrlSerializer_16; }
-    if ((token === import3.RouterOutletMap)) { return this._RouterOutletMap_17; }
-    if ((token === import3.ROUTER_CONFIGURATION)) { return this._ROUTER_CONFIGURATION_18; }
-    if ((token === import2.LocationStrategy)) { return this._LocationStrategy_19; }
-    if ((token === import2.Location)) { return this._Location_20; }
-    if ((token === import0.Compiler)) { return this._Compiler_21; }
-    if ((token === import0.NgModuleFactoryLoader)) { return this._NgModuleFactoryLoader_22; }
-    if ((token === import3.ROUTES)) { return this._ROUTES_23; }
-    if ((token === import3.Router)) { return this._Router_24; }
-    if ((token === import3.RouterModule)) { return this._RouterModule_25; }
-    if ((token === import8.AppModule)) { return this._AppModule_26; }
-    if ((token === import1.BrowserAppModule)) { return this._BrowserAppModule_27; }
-    if ((token === import0.LOCALE_ID)) { return this._LOCALE_ID_28; }
-    if ((token === import2.NgLocalization)) { return this._NgLocalization_29; }
-    if ((token === import0.IterableDiffers)) { return this._IterableDiffers_30; }
-    if ((token === import0.KeyValueDiffers)) { return this._KeyValueDiffers_31; }
-    if ((token === import4.DomSanitizer)) { return this._DomSanitizer_32; }
-    if ((token === import0.Sanitizer)) { return this._Sanitizer_33; }
-    if ((token === import4.HAMMER_GESTURE_CONFIG)) { return this._HAMMER_GESTURE_CONFIG_34; }
-    if ((token === import4.EVENT_MANAGER_PLUGINS)) { return this._EVENT_MANAGER_PLUGINS_35; }
-    if ((token === import4.EventManager)) { return this._EventManager_36; }
-    if ((token === import4.ɵDomSharedStylesHost)) { return this._ɵDomSharedStylesHost_37; }
-    if ((token === import4.ɵDomRendererFactory2)) { return this._ɵDomRendererFactory2_38; }
-    if ((token === import0.RendererFactory2)) { return this._RendererFactory2_39; }
-    if ((token === import4.ɵSharedStylesHost)) { return this._ɵSharedStylesHost_40; }
-    if ((token === import0.Testability)) { return this._Testability_41; }
-    if ((token === import4.Meta)) { return this._Meta_42; }
-    if ((token === import4.Title)) { return this._Title_43; }
-    if ((token === import13.TransferState)) { return this._TransferState_44; }
-    if ((token === import6.BrowserXhr)) { return this._BrowserXhr_45; }
-    if ((token === import6.ResponseOptions)) { return this._ResponseOptions_46; }
-    if ((token === import6.XSRFStrategy)) { return this._XSRFStrategy_47; }
-    if ((token === import6.XHRBackend)) { return this._XHRBackend_48; }
-    if ((token === import6.RequestOptions)) { return this._RequestOptions_49; }
-    if ((token === import6.Http)) { return this._Http_50; }
-    if ((token === import9.TransferHttp)) { return this._TransferHttp_51; }
-    if ((token === import3.ActivatedRoute)) { return this._ActivatedRoute_52; }
-    if ((token === import3.NoPreloading)) { return this._NoPreloading_53; }
-    if ((token === import3.PreloadingStrategy)) { return this._PreloadingStrategy_54; }
-    if ((token === import3.RouterPreloader)) { return this._RouterPreloader_55; }
-    if ((token === import3.PreloadAllModules)) { return this._PreloadAllModules_56; }
-    if ((token === import3.ROUTER_INITIALIZER)) { return this._ROUTER_INITIALIZER_57; }
-    if ((token === import0.APP_BOOTSTRAP_LISTENER)) { return this._APP_BOOTSTRAP_LISTENER_58; }
+    if ((token === import5.BrowserAnimationsModule)) { return this._BrowserAnimationsModule_12; }
+    if ((token === import6.BrowserTransferStateModule)) { return this._BrowserTransferStateModule_13; }
+    if ((token === import7.HttpModule)) { return this._HttpModule_14; }
+    if ((token === import8.MdbNavModule)) { return this._MdbNavModule_15; }
+    if ((token === import9.MdbButtonModule)) { return this._MdbButtonModule_16; }
+    if ((token === import10.MdbSidenavModule)) { return this._MdbSidenavModule_17; }
+    if ((token === import11.MaterialsBclightModule)) { return this._MaterialsBclightModule_18; }
+    if ((token === import12.TransferHttpModule)) { return this._TransferHttpModule_19; }
+    if ((token === import3.ɵa)) { return this._ɵa_20; }
+    if ((token === import3.UrlSerializer)) { return this._UrlSerializer_21; }
+    if ((token === import3.RouterOutletMap)) { return this._RouterOutletMap_22; }
+    if ((token === import3.ROUTER_CONFIGURATION)) { return this._ROUTER_CONFIGURATION_23; }
+    if ((token === import2.LocationStrategy)) { return this._LocationStrategy_24; }
+    if ((token === import2.Location)) { return this._Location_25; }
+    if ((token === import0.Compiler)) { return this._Compiler_26; }
+    if ((token === import0.NgModuleFactoryLoader)) { return this._NgModuleFactoryLoader_27; }
+    if ((token === import3.ROUTES)) { return this._ROUTES_28; }
+    if ((token === import3.Router)) { return this._Router_29; }
+    if ((token === import3.RouterModule)) { return this._RouterModule_30; }
+    if ((token === import13.AppRoutingModule)) { return this._AppRoutingModule_31; }
+    if ((token === import14.GlobalsModule)) { return this._GlobalsModule_32; }
+    if ((token === import15.AppModule)) { return this._AppModule_33; }
+    if ((token === import1.BrowserAppModule)) { return this._BrowserAppModule_34; }
+    if ((token === import0.LOCALE_ID)) { return this._LOCALE_ID_35; }
+    if ((token === import2.NgLocalization)) { return this._NgLocalization_36; }
+    if ((token === import0.IterableDiffers)) { return this._IterableDiffers_37; }
+    if ((token === import0.KeyValueDiffers)) { return this._KeyValueDiffers_38; }
+    if ((token === import4.DomSanitizer)) { return this._DomSanitizer_39; }
+    if ((token === import0.Sanitizer)) { return this._Sanitizer_40; }
+    if ((token === import4.HAMMER_GESTURE_CONFIG)) { return this._HAMMER_GESTURE_CONFIG_41; }
+    if ((token === import4.EVENT_MANAGER_PLUGINS)) { return this._EVENT_MANAGER_PLUGINS_42; }
+    if ((token === import4.EventManager)) { return this._EventManager_43; }
+    if ((token === import4.ɵDomSharedStylesHost)) { return this._ɵDomSharedStylesHost_44; }
+    if ((token === import4.ɵDomRendererFactory2)) { return this._ɵDomRendererFactory2_45; }
+    if ((token === import18.AnimationDriver)) { return this._AnimationDriver_46; }
+    if ((token === import18.ɵAnimationStyleNormalizer)) { return this._ɵAnimationStyleNormalizer_47; }
+    if ((token === import18.ɵAnimationEngine)) { return this._ɵAnimationEngine_48; }
+    if ((token === import0.RendererFactory2)) { return this._RendererFactory2_49; }
+    if ((token === import4.ɵSharedStylesHost)) { return this._ɵSharedStylesHost_50; }
+    if ((token === import0.Testability)) { return this._Testability_51; }
+    if ((token === import4.Meta)) { return this._Meta_52; }
+    if ((token === import4.Title)) { return this._Title_53; }
+    if ((token === import19.TransferState)) { return this._TransferState_54; }
+    if ((token === import7.BrowserXhr)) { return this._BrowserXhr_55; }
+    if ((token === import7.ResponseOptions)) { return this._ResponseOptions_56; }
+    if ((token === import7.XSRFStrategy)) { return this._XSRFStrategy_57; }
+    if ((token === import7.XHRBackend)) { return this._XHRBackend_58; }
+    if ((token === import7.RequestOptions)) { return this._RequestOptions_59; }
+    if ((token === import7.Http)) { return this._Http_60; }
+    if ((token === import16.TransferHttp)) { return this._TransferHttp_61; }
+    if ((token === import3.ActivatedRoute)) { return this._ActivatedRoute_62; }
+    if ((token === import3.NoPreloading)) { return this._NoPreloading_63; }
+    if ((token === import3.PreloadingStrategy)) { return this._PreloadingStrategy_64; }
+    if ((token === import3.RouterPreloader)) { return this._RouterPreloader_65; }
+    if ((token === import3.PreloadAllModules)) { return this._PreloadAllModules_66; }
+    if ((token === import3.ROUTER_INITIALIZER)) { return this._ROUTER_INITIALIZER_67; }
+    if ((token === import0.APP_BOOTSTRAP_LISTENER)) { return this._APP_BOOTSTRAP_LISTENER_68; }
     return notFoundResult;
   }
   destroyInternal():void {
     this._ɵf_8.ngOnDestroy();
-    (this.__ɵDomSharedStylesHost_37 && this._ɵDomSharedStylesHost_37.ngOnDestroy());
-    (this.__RouterPreloader_55 && this._RouterPreloader_55.ngOnDestroy());
+    (this.__ɵDomSharedStylesHost_44 && this._ɵDomSharedStylesHost_44.ngOnDestroy());
+    (this.__RouterPreloader_65 && this._RouterPreloader_65.ngOnDestroy());
   }
 }
 export const BrowserAppModuleNgFactory:import0.NgModuleFactory<import1.BrowserAppModule> = new import0.NgModuleFactory<any>(BrowserAppModuleInjector,import1.BrowserAppModule);
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9icm93c2VyLWFwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9icm93c2VyLWFwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OyJ9
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9icm93c2VyLWFwcC5tb2R1bGUubmdmYWN0b3J5LnRzIiwidmVyc2lvbiI6Mywic291cmNlUm9vdCI6IiIsInNvdXJjZXMiOlsibmc6Ly8vRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9icm93c2VyLWFwcC5tb2R1bGUudHMiXSwic291cmNlc0NvbnRlbnQiOlsiICJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OzsifQ==

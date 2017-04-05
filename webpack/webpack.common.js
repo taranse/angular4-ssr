@@ -1,8 +1,8 @@
 const {root} = require('./helpers');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-/**
- * This is a common webpack config which is the base for all builds
- */
+const path = require('path');
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
   devtool: 'source-map',
   resolve: {
@@ -16,8 +16,13 @@ module.exports = {
       {test: /\.ts$/, loader: '@ngtools/webpack'},
       {test: /\.html$/, loader: 'raw-loader'},
       {test: /\.css$/, loaders: ['to-string-loader', 'css-loader']},
-      { test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "url-loader?limit=10000&mimetype=application/font-woff" },
-      { test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader" },
+      {
+        test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,
+        loader: "url-loader?limit=10000&mimetype=application/font-woff",
+        options: {output: '[path][name].[ext]'}
+      },
+      {test: /\.(ttf|eot|svg)(\?v=[0-9]\.[0-9]\.[0-9])?$/, loader: "file-loader", options: {output: '[path][name].[ext]'}},
+      {test: /\.(jpe?g|gif|png|svg|woff|ttf|wav|mp3)$/, loader: "file-loader", options: {output: '[path][name].[ext]'}},
       {
         exclude: [
           root("./src/styles.scss")
@@ -26,7 +31,6 @@ module.exports = {
         loaders: [
           "exports-loader?module.exports.toString()",
           "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-          "postcss-loader",
           "sass-loader"
         ]
       },
@@ -34,57 +38,9 @@ module.exports = {
         "include": [
           root("./src/styles.scss")
         ],
-        "test": /\.css$/,
-        "loaders": ExtractTextPlugin.extract({
-          "use": [
-            "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-            "postcss-loader"
-          ],
-          "fallback": "style-loader",
-          "publicPath": ""
-        })
-      },
-      {
-        "include": [
-          root("./src/styles.scss")
-        ],
         "test": /\.scss$|\.sass$/,
         "loaders": ExtractTextPlugin.extract({
-          "use": [
-            "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-            "postcss-loader",
-            "sass-loader"
-          ],
-          "fallback": "style-loader",
-          "publicPath": ""
-        })
-      },
-      {
-        "include": [
-          root("./src/styles.scss")
-        ],
-        "test": /\.less$/,
-        "loaders": ExtractTextPlugin.extract({
-          "use": [
-            "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-            "postcss-loader",
-            "less-loader"
-          ],
-          "fallback": "style-loader",
-          "publicPath": ""
-        })
-      },
-      {
-        "include": [
-          root("./src/styles.scss")
-        ],
-        "test": /\.styl$/,
-        "loaders": ExtractTextPlugin.extract({
-          "use": [
-            "css-loader?{\"sourceMap\":false,\"importLoaders\":1}",
-            "postcss-loader",
-            "stylus-loader?{\"sourceMap\":false,\"paths\":[]}"
-          ],
+          "use": ['style-loader', 'css-loader', 'resolve-url-loader', 'sass-loader?sourceMap'],
           "fallback": "style-loader",
           "publicPath": ""
         })

@@ -10,10 +10,9 @@ import * as import0 from '@angular/core';
 import * as import1 from './globals/header/header.component.ngfactory';
 import * as import2 from '../../../app/globals/header/header.component';
 import * as import3 from '@angular/router';
-import * as import4 from '@angular/common';
-import * as import5 from './globals/footer/footer.component.ngfactory';
-import * as import6 from '../../../app/globals/footer/footer.component';
-import * as import7 from '../../../app/app.component';
+import * as import4 from './globals/footer/footer.component.ngfactory';
+import * as import5 from '../../../app/globals/footer/footer.component';
+import * as import6 from '../../../app/app.component';
 const styles_AppComponent:any[] = ([] as any[]);
 export const RenderType_AppComponent:import0.RendererType2 = import0.ɵcrt({
   encapsulation: 2,
@@ -24,136 +23,7 @@ export const RenderType_AppComponent:import0.RendererType2 = import0.ɵcrt({
 export function View_AppComponent_0(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(0,[
     (l()(),import0.ɵeld(0,(null as any),(null as any),1,'app-header',([] as any[]),(null as any),(null as any),(null as any),import1.View_HeaderComponent_0,import1.RenderType_HeaderComponent)),
-    import0.ɵdid(57344,(null as any),0,import2.HeaderComponent,([] as any[]),(null as any),(null as any)),
-    (l()(),import0.ɵted((null as any),['\n'])),
-    (l()(),import0.ɵeld(0,(null as any),(null as any),1,'h1',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
-    (l()(),import0.ɵted((null as any),['Universal Demo'])),
-    (l()(),import0.ɵted((null as any),['\n'])),
-      (l()(),import0.ɵeld(0,(null as any),(null as any),2,'a',[[
-        'routerLink',
-        '/'
-      ]
-    ],[
-      [
-        1,
-        'target',
-        0
-      ]
-      ,
-      [
-        8,
-        'href',
-        4
-      ]
-
-    ]
-      ,[[
-        (null as any),
-        'click'
-      ]
-    ],(v,en,$event) => {
-      var ad:boolean = true;
-      if (('click' === en)) {
-        const pd_0:any = ((<any>import0.ɵnov(v,7).onClick($event.button,$event.ctrlKey,$event.metaKey)) !== false);
-        ad = (pd_0 && ad);
-      }
-      return ad;
-    },(null as any),(null as any))),
-    import0.ɵdid(335872,(null as any),0,import3.RouterLinkWithHref,[
-      import3.Router,
-      import3.ActivatedRoute,
-      import4.LocationStrategy
-    ]
-      ,{routerLink: [
-        0,
-        'routerLink'
-      ]
-    },(null as any)),
-    (l()(),import0.ɵted((null as any),['Home'])),
-    (l()(),import0.ɵted((null as any),['\n'])),
-      (l()(),import0.ɵeld(0,(null as any),(null as any),2,'a',[[
-        'routerLink',
-        '/lazy'
-      ]
-    ],[
-      [
-        1,
-        'target',
-        0
-      ]
-      ,
-      [
-        8,
-        'href',
-        4
-      ]
-
-    ]
-      ,[[
-        (null as any),
-        'click'
-      ]
-    ],(v,en,$event) => {
-      var ad:boolean = true;
-      if (('click' === en)) {
-        const pd_0:any = ((<any>import0.ɵnov(v,11).onClick($event.button,$event.ctrlKey,$event.metaKey)) !== false);
-        ad = (pd_0 && ad);
-      }
-      return ad;
-    },(null as any),(null as any))),
-    import0.ɵdid(335872,(null as any),0,import3.RouterLinkWithHref,[
-      import3.Router,
-      import3.ActivatedRoute,
-      import4.LocationStrategy
-    ]
-      ,{routerLink: [
-        0,
-        'routerLink'
-      ]
-    },(null as any)),
-    (l()(),import0.ɵted((null as any),['Lazy'])),
-    (l()(),import0.ɵted((null as any),['\n'])),
-      (l()(),import0.ɵeld(0,(null as any),(null as any),2,'a',[[
-        'routerLink',
-        '/main'
-      ]
-    ],[
-      [
-        1,
-        'target',
-        0
-      ]
-      ,
-      [
-        8,
-        'href',
-        4
-      ]
-
-    ]
-      ,[[
-        (null as any),
-        'click'
-      ]
-    ],(v,en,$event) => {
-      var ad:boolean = true;
-      if (('click' === en)) {
-        const pd_0:any = ((<any>import0.ɵnov(v,15).onClick($event.button,$event.ctrlKey,$event.metaKey)) !== false);
-        ad = (pd_0 && ad);
-      }
-      return ad;
-    },(null as any),(null as any))),
-    import0.ɵdid(335872,(null as any),0,import3.RouterLinkWithHref,[
-      import3.Router,
-      import3.ActivatedRoute,
-      import4.LocationStrategy
-    ]
-      ,{routerLink: [
-        0,
-        'routerLink'
-      ]
-    },(null as any)),
-    (l()(),import0.ɵted((null as any),['main'])),
+    import0.ɵdid(24576,(null as any),0,import2.HeaderComponent,([] as any[]),(null as any),(null as any)),
     (l()(),import0.ɵted((null as any),['\n'])),
     (l()(),import0.ɵeld(8388608,(null as any),(null as any),1,'router-outlet',([] as any[]),(null as any),(null as any),(null as any),(null as any),(null as any))),
     import0.ɵdid(73728,(null as any),0,import3.RouterOutlet,[
@@ -168,39 +38,22 @@ export function View_AppComponent_0(l:any):import0.ɵViewDefinition {
     ]
     ,(null as any),(null as any)),
     (l()(),import0.ɵted((null as any),['\n'])),
-    (l()(),import0.ɵeld(0,(null as any),(null as any),1,'app-footer',([] as any[]),(null as any),(null as any),(null as any),import5.View_FooterComponent_0,import5.RenderType_FooterComponent)),
-    import0.ɵdid(57344,(null as any),0,import6.FooterComponent,([] as any[]),(null as any),(null as any)),
+    (l()(),import0.ɵeld(0,(null as any),(null as any),1,'app-footer',([] as any[]),(null as any),(null as any),(null as any),import4.View_FooterComponent_0,import4.RenderType_FooterComponent)),
+    import0.ɵdid(57344,(null as any),0,import5.FooterComponent,([] as any[]),(null as any),(null as any)),
     (l()(),import0.ɵted((null as any),['\n']))
   ]
   ,(ck,v) => {
-    ck(v,1,0);
-    const currVal_2:any = '/';
-    ck(v,7,0,currVal_2);
-    const currVal_5:any = '/lazy';
-    ck(v,11,0,currVal_5);
-    const currVal_8:any = '/main';
-    ck(v,15,0,currVal_8);
-    ck(v,22,0);
-  },(ck,v) => {
-    const currVal_0:any = import0.ɵnov(v,7).target;
-    const currVal_1:any = import0.ɵnov(v,7).href;
-    ck(v,6,0,currVal_0,currVal_1);
-    const currVal_3:any = import0.ɵnov(v,11).target;
-    const currVal_4:any = import0.ɵnov(v,11).href;
-    ck(v,10,0,currVal_3,currVal_4);
-    const currVal_6:any = import0.ɵnov(v,15).target;
-    const currVal_7:any = import0.ɵnov(v,15).href;
-    ck(v,14,0,currVal_6,currVal_7);
-  });
+    ck(v,7,0);
+  },(null as any));
 }
 function View_AppComponent_Host_0(l:any):import0.ɵViewDefinition {
   return import0.ɵvid(0,[
     (l()(),import0.ɵeld(0,(null as any),(null as any),1,'demo-app',([] as any[]),(null as any),(null as any),(null as any),View_AppComponent_0,RenderType_AppComponent)),
-    import0.ɵdid(57344,(null as any),0,import7.AppComponent,([] as any[]),(null as any),(null as any))
+    import0.ɵdid(57344,(null as any),0,import6.AppComponent,([] as any[]),(null as any),(null as any))
   ]
   ,(ck,v) => {
     ck(v,1,0);
   },(null as any));
 }
-export const AppComponentNgFactory:import0.ComponentFactory<import7.AppComponent> = import0.ɵccf('demo-app',import7.AppComponent,View_AppComponent_Host_0,{},{},([] as any[]));
-//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9hcHAuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0Q6L1dvcmsvYW5ndWxhcjItc2VydmVyLXRlc3QvYW5ndWxhcjQtc3NyL3NyYy9hcHAvYXBwLmNvbXBvbmVudC50cyIsIm5nOi8vL0Q6L1dvcmsvYW5ndWxhcjItc2VydmVyLXRlc3QvYW5ndWxhcjQtc3NyL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9hcHAuY29tcG9uZW50LnRzLkFwcENvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxhcHAtaGVhZGVyPjwvYXBwLWhlYWRlcj5cbjxoMT5Vbml2ZXJzYWwgRGVtbzwvaDE+XG48YSByb3V0ZXJMaW5rPVwiL1wiPkhvbWU8L2E+XG48YSByb3V0ZXJMaW5rPVwiL2xhenlcIj5MYXp5PC9hPlxuPGEgcm91dGVyTGluaz1cIi9tYWluXCI+bWFpbjwvYT5cbjxyb3V0ZXItb3V0bGV0Pjwvcm91dGVyLW91dGxldD5cbjxhcHAtZm9vdGVyPjwvYXBwLWZvb3Rlcj5cbiIsIjxkZW1vLWFwcD48L2RlbW8tYXBwPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7SUNBQTtnQkFBQTtJQUF5QjtJQUN6QjtJQUFJO0lBQW1CO01BQ3ZCO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO01BQUE7TUFBQTtRQUFBO1FBQUE7TUFBQTtNQUFBO0lBQUE7Z0JBQUE7Ozs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7SUFBa0I7SUFBUTtNQUMxQjtRQUFBO1FBQUE7TUFBQTtJQUFBO01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7TUFBQTtRQUFBO1FBQUE7UUFBQTtNQUFBOztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO01BQUE7UUFBQTtRQUFBO01BQUE7TUFBQTtJQUFBO2dCQUFBOzs7O0lBQUE7T0FBQTtRQUFBO1FBQUE7TUFBQTtJQUFBO0lBQXNCO0lBQVE7TUFDOUI7UUFBQTtRQUFBO01BQUE7SUFBQTtNQUFBO1FBQUE7UUFBQTtRQUFBO01BQUE7O01BQUE7UUFBQTtRQUFBO1FBQUE7TUFBQTs7SUFBQTtPQUFBO1FBQUE7UUFBQTtNQUFBO0lBQUE7TUFBQTtNQUFBO1FBQUE7UUFBQTtNQUFBO01BQUE7SUFBQTtnQkFBQTs7OztJQUFBO09BQUE7UUFBQTtRQUFBO01BQUE7SUFBQTtJQUFzQjtJQUFRO0lBQzlCO2dCQUFBOzs7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtJQUErQjtJQUMvQjtnQkFBQTtJQUF5Qjs7O0lBTnpCO0lBRUc7SUFBSCxTQUFHLFNBQUg7SUFDRztJQUFILFVBQUcsU0FBSDtJQUNHO0lBQUgsVUFBRyxTQUFIO0lBRUE7O0lBSkE7SUFBQTtJQUFBLFNBQUEsbUJBQUE7SUFDQTtJQUFBO0lBQUEsVUFBQSxtQkFBQTtJQUNBO0lBQUE7SUFBQSxVQUFBLG1CQUFBOzs7OztJQ0pBO2dCQUFBOzs7SUFBQTs7OyJ9
+export const AppComponentNgFactory:import0.ComponentFactory<import6.AppComponent> = import0.ɵccf('demo-app',import6.AppComponent,View_AppComponent_Host_0,{},{},([] as any[]));
+//# sourceMappingURL=data:application/json;base64,eyJmaWxlIjoiRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9hcHAuY29tcG9uZW50Lm5nZmFjdG9yeS50cyIsInZlcnNpb24iOjMsInNvdXJjZVJvb3QiOiIiLCJzb3VyY2VzIjpbIm5nOi8vL0Q6L1dvcmsvYW5ndWxhcjItc2VydmVyLXRlc3QvYW5ndWxhcjQtc3NyL3NyYy9hcHAvYXBwLmNvbXBvbmVudC50cyIsIm5nOi8vL0Q6L1dvcmsvYW5ndWxhcjItc2VydmVyLXRlc3QvYW5ndWxhcjQtc3NyL3NyYy9hcHAvYXBwLmNvbXBvbmVudC5odG1sIiwibmc6Ly8vRDovV29yay9hbmd1bGFyMi1zZXJ2ZXItdGVzdC9hbmd1bGFyNC1zc3Ivc3JjL2FwcC9hcHAuY29tcG9uZW50LnRzLkFwcENvbXBvbmVudF9Ib3N0Lmh0bWwiXSwic291cmNlc0NvbnRlbnQiOlsiICIsIjxhcHAtaGVhZGVyPjwvYXBwLWhlYWRlcj5cbjxyb3V0ZXItb3V0bGV0Pjwvcm91dGVyLW91dGxldD5cbjxhcHAtZm9vdGVyPjwvYXBwLWZvb3Rlcj5cbiIsIjxkZW1vLWFwcD48L2RlbW8tYXBwPiJdLCJtYXBwaW5ncyI6IkFBQUE7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7OztJQ0FBO2dCQUFBO0lBQXlCO0lBQ3pCO2dCQUFBOzs7O01BQUE7UUFBQTtRQUFBO01BQUE7O0lBQUE7S0FBQTtJQUErQjtJQUMvQjtnQkFBQTtJQUF5Qjs7O0lBQXpCOzs7OztJQ0ZBO2dCQUFBOzs7SUFBQTs7OyJ9

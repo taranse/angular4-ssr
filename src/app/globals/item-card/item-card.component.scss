@@ -1,0 +1,6 @@
+.card {
+  .card-content, .card-action {padding: 0}
+}
+:host /deep/ {
+  mdb-button {padding:0;width:100%;}
+}

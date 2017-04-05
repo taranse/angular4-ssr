@@ -50,9 +50,9 @@ var LazyModuleInjector = (function (_super) {
     return LazyModuleInjector;
 }(import0.ɵNgModuleInjector));
 export var LazyModuleNgFactory = new import0.NgModuleFactory(LazyModuleInjector, import1.LazyModule);
-var styles_LazyView = [];
+var styles_LazyView = ['*[_ngcontent-%COMP%] {color: red}'];
 export var RenderType_LazyView = import0.ɵcrt({
-    encapsulation: 2,
+    encapsulation: 0,
     styles: styles_LazyView,
     data: {}
 });

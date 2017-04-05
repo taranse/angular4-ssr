@@ -15,7 +15,7 @@ export interface NgSetupOptions {
 /**
  * This holds a cached version of each index used.
  */
-const templateCache: { [key: string]: string } = {};
+export const templateCache: { [key: string]: string } = {};
 
 /**
  * This is an express engine for handling Angular Applications

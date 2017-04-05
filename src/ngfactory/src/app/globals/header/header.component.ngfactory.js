@@ -6,15 +6,101 @@
 /* tslint:disable */
 import * as import0 from './header.component.scss.shim.ngstyle';
 import * as import1 from '@angular/core';
-import * as import2 from '../../../../../app/globals/header/header.component';
+import * as import2 from '@angular/router';
+import * as import3 from '@angular/common';
+import * as import4 from '../../materials-bclight/mdb-sidenav/mdb-sidenav.component.ngfactory';
+import * as import5 from '../../../../../app/materials-bclight/mdb-sidenav/mdb-sidenav.component';
+import * as import6 from '../../../../../app/globals/header/header.component';
+import * as import7 from '../../materials-bclight/mdb-button/mdb-button.component.ngfactory';
+import * as import8 from '../../../../../app/materials-bclight/mdb-button/mdb-button.component';
+import * as import9 from '../../materials-bclight/mdb-nav/mdb-nav.component.ngfactory';
+import * as import10 from '../../../../../app/materials-bclight/mdb-nav/mdb-nav.component';
 var styles_HeaderComponent = [import0.styles];
 export var RenderType_HeaderComponent = import1.ɵcrt({
     encapsulation: 0,
     styles: styles_HeaderComponent,
     data: {}
 });
+function View_HeaderComponent_1(l) {
+    return import1.ɵvid(0, [
+        (l()(), import1.ɵeld(0, null, null, 5, 'a', [[
+                'routerLinkActive',
+                'active'
+            ]
+        ], [
+            [
+                8,
+                'className',
+                0
+            ],
+            [
+                1,
+                'target',
+                0
+            ],
+            [
+                8,
+                'href',
+                4
+            ]
+        ], [[
+                null,
+                'click'
+            ]
+        ], function (v, en, $event) {
+            var ad = true;
+            if (('click' === en)) {
+                var pd_0 = (import1.ɵnov(v, 1).onClick($event.button, $event.ctrlKey, $event.metaKey) !== false);
+                ad = (pd_0 && ad);
+            }
+            return ad;
+        }, null, null)),
+        import1.ɵdid(335872, [[
+                3,
+                4
+            ]
+        ], 0, import2.RouterLinkWithHref, [
+            import2.Router,
+            import2.ActivatedRoute,
+            import3.LocationStrategy
+        ], { routerLink: [
+                0,
+                'routerLink'
+            ]
+        }, null),
+        import1.ɵdid(860160, null, 2, import2.RouterLinkActive, [
+            import2.Router,
+            import1.ElementRef,
+            import1.Renderer,
+            import1.ChangeDetectorRef
+        ], { routerLinkActive: [
+                0,
+                'routerLinkActive'
+            ]
+        }, null),
+        import1.ɵqud(301989888, 2, { links: 1 }),
+        import1.ɵqud(301989888, 3, { linksWithHrefs: 1 }),
+        (l()(), import1.ɵted(null, [
+            '\n          ',
+            '\n        '
+        ]))
+    ], function (ck, v) {
+        var currVal_3 = import1.ɵinlineInterpolate(1, '', v.context.$implicit.link.alias, '');
+        ck(v, 1, 0, currVal_3);
+        var currVal_4 = 'active';
+        ck(v, 2, 0, currVal_4);
+    }, function (ck, v) {
+        var currVal_0 = import1.ɵinlineInterpolate(1, '', v.context.$implicit.selectorClass, '');
+        var currVal_1 = import1.ɵnov(v, 1).target;
+        var currVal_2 = import1.ɵnov(v, 1).href;
+        ck(v, 0, 0, currVal_0, currVal_1, currVal_2);
+        var currVal_5 = v.context.$implicit.name;
+        ck(v, 5, 0, currVal_5);
+    });
+}
 export function View_HeaderComponent_0(l) {
     return import1.ɵvid(0, [
+        import1.ɵqud(201326592, 1, { sidenav: 0 }),
         (l()(), import1.ɵted(null, ['\n'])),
         (l()(), import1.ɵted(null, ['\n'])),
         (l()(), import1.ɵted(null, ['\n'])),
@@ -28,32 +114,57 @@ export function View_HeaderComponent_0(l) {
         (l()(), import1.ɵted(null, ['\n'])),
         (l()(), import1.ɵted(null, ['\n'])),
         (l()(), import1.ɵted(null, ['\n'])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵeld(0, null, null, 29, 'nav', [[
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵeld(0, null, null, 53, 'nav', [[
                 'class',
                 'grey lighten-2 header'
             ]
         ], null, null, null, null, null)),
-        (l()(), import1.ɵted(null, ['\n    '])),
-        (l()(), import1.ɵeld(0, null, null, 26, 'div', [[
+        (l()(), import1.ɵted(null, ['\n  '])),
+        (l()(), import1.ɵeld(0, null, null, 50, 'div', [[
                 'class',
                 'middle layout-row'
             ]
         ], null, null, null, null, null)),
-        (l()(), import1.ɵted(null, ['\n      '])),
-        (l()(), import1.ɵeld(0, null, null, 7, 'div', [[
+        (l()(), import1.ɵted(null, ['\n    '])),
+        (l()(), import1.ɵeld(0, null, null, 32, 'div', [[
                 'class',
-                'md-padding side np-md nav-content flex-gt-sm-60 flex-gt-xs-33 flex-25 layout-row'
+                'md-padding side nav-content flex-gt-sm-60 flex-gt-xs-33 flex-25 layout-row'
+            ]
+        ], null, null, null, null, null)),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵeld(0, null, null, 14, 'mdb-sidenav', [], null, null, null, import4.View_MdbSidenavComponent_0, import4.RenderType_MdbSidenavComponent)),
+        import1.ɵdid(24576, [
+            [
+                1,
+                4
+            ],
+            [
+                'sidenav',
+                4
+            ]
+        ], 0, import5.MdbSidenavComponent, [], null, null),
+        (l()(), import1.ɵted(null, ['\n        '])),
+        (l()(), import1.ɵeld(0, null, 0, 0, 'div', [[
+                'class',
+                'mdb-header'
             ]
         ], null, null, null, null, null)),
         (l()(), import1.ɵted(null, ['\n        '])),
-        (l()(), import1.ɵeld(0, null, null, 1, 'button', [
+        (l()(), import1.ɵeld(0, null, 1, 1, 'div', [[
+                'class',
+                'mdb-content'
+            ]
+        ], null, null, null, null, null)),
+        (l()(), import1.ɵted(null, ['123'])),
+        (l()(), import1.ɵted(null, ['\n        '])),
+        (l()(), import1.ɵeld(0, null, 2, 5, 'mdb-button', [
             [
                 'class',
-                'grey lighten-2 menu-sidenav-button '
+                'grey lighten-2 menu-sidenav-button btn-floating hide show-gt-sm-down mdb-sidenav-button'
             ],
             [
-                'md-button',
+                'mdb-icon',
                 ''
             ]
         ], null, [[
@@ -64,40 +175,72 @@ export function View_HeaderComponent_0(l) {
             var ad = true;
             var co = v.component;
             if (('click' === en)) {
-                var pd_0 = (co.CliclActive() !== false);
+                var pd_0 = (co.sidenavOpen() !== false);
                 ad = (pd_0 && ad);
             }
             return ad;
-        }, null, null)),
-        (l()(), import1.ɵted(null, ['\n          active\n        '])),
-        (l()(), import1.ɵted(null, ['\n          '])),
-        (l()(), import1.ɵted(null, ['\n            '])),
-        (l()(), import1.ɵted(null, ['\n          '])),
-        (l()(), import1.ɵted(null, ['\n\n      '])),
+        }, import7.View_MdbButtonComponent_0, import7.RenderType_MdbButtonComponent)),
+        import1.ɵdid(57344, null, 0, import8.MdbButtonComponent, [], null, null),
+        (l()(), import1.ɵted(0, ['\n          '])),
+        (l()(), import1.ɵeld(0, null, 0, 1, 'i', [[
+                'class',
+                'material-icons'
+            ]
+        ], null, null, null, null, null)),
+        (l()(), import1.ɵted(null, ['menu'])),
+        (l()(), import1.ɵted(0, ['\n        '])),
         (l()(), import1.ɵted(null, ['\n      '])),
-        (l()(), import1.ɵeld(0, null, null, 14, 'div', [[
+        (l()(), import1.ɵted(null, ['\n\n      '])),
+        (l()(), import1.ɵted(null, ['\n        '])),
+        (l()(), import1.ɵted(null, ['\n          '])),
+        (l()(), import1.ɵted(null, ['\n        '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵeld(0, null, null, 5, 'mdb-nav', [[
+                'class',
+                'hide show-gt-sm'
+            ]
+        ], null, null, null, import9.View_MdbNavComponent_0, import9.RenderType_MdbNavComponent)),
+        import1.ɵdid(57344, null, 0, import10.MdbNavComponent, [], null, null),
+        (l()(), import1.ɵted(0, ['\n        '])),
+        (l()(), import1.ɵand(8388608, null, 0, 1, null, View_HeaderComponent_1)),
+        import1.ɵdid(401408, null, 0, import3.NgForOf, [
+            import1.ViewContainerRef,
+            import1.TemplateRef,
+            import1.IterableDiffers
+        ], { ngForOf: [
+                0,
+                'ngForOf'
+            ]
+        }, null),
+        (l()(), import1.ɵted(0, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n\n    '])),
+        (l()(), import1.ɵted(null, ['\n    '])),
+        (l()(), import1.ɵeld(0, null, null, 13, 'div', [[
                 'class',
                 'md-padding side nav-content flex-gt-sm-40 flex-gt-xs-66 flex-75 layout-row layout-align-end-center'
             ]
         ], null, null, null, null, null)),
-        (l()(), import1.ɵted(null, ['\n        '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
         (l()(), import1.ɵeld(0, null, null, 1, 'button', [[
                 'class',
                 'hide-gt-sm waves-effect waves-light btn'
             ]
         ], null, null, null, null, null)),
-        (l()(), import1.ɵted(null, ['\n          a\n        '])),
-        (l()(), import1.ɵted(null, ['\n        '])),
-        (l()(), import1.ɵted(null, ['\n        '])),
-        (l()(), import1.ɵted(null, ['\n            '])),
-        (l()(), import1.ɵted(null, ['\n        '])),
-        (l()(), import1.ɵted(null, ['\n        '])),
+        (l()(), import1.ɵted(null, ['\n        a\n      '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
+        (l()(), import1.ɵted(null, ['\n      '])),
         (l()(), import1.ɵeld(0, null, null, 4, 'p', [[
                 'class',
                 'hide show-gt-sm layout-row layout-align-end-center'
             ]
         ], null, null, null, null, null)),
-        (l()(), import1.ɵted(null, ['\n          Звонок по России бесплатно -  '])),
+        (l()(), import1.ɵted(null, ['\n        Звонок по России бесплатно -  '])),
         (l()(), import1.ɵeld(0, null, null, 1, 'a', [[
                 'class',
                 'black-text'
@@ -107,174 +250,178 @@ export function View_HeaderComponent_0(l) {
             '',
             ''
         ])),
-        (l()(), import1.ɵted(null, ['\n        '])),
         (l()(), import1.ɵted(null, ['\n      '])),
         (l()(), import1.ɵted(null, ['\n    '])),
         (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
-        (l()(), import1.ɵted(null, ['\n  '])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
+        (l()(), import1.ɵted(null, ['\n'])),
         (l()(), import1.ɵted(null, ['\n'])),
         (l()(), import1.ɵted(null, ['\n']))
-    ], null, function (ck, v) {
+    ], function (ck, v) {
         var co = v.component;
-        var currVal_0 = co.phones.main;
-        ck(v, 39, 0, currVal_0);
+        ck(v, 30, 0);
+        ck(v, 43, 0);
+        var currVal_0 = co.navigateTop;
+        ck(v, 46, 0, currVal_0);
+    }, function (ck, v) {
+        var co = v.component;
+        var currVal_1 = co.phones.main;
+        ck(v, 64, 0, currVal_1);
     });
 }
 function View_HeaderComponent_Host_0(l) {
     return import1.ɵvid(0, [
         (l()(), import1.ɵeld(0, null, null, 1, 'app-header', [], null, null, null, View_HeaderComponent_0, RenderType_HeaderComponent)),
-        import1.ɵdid(57344, null, 0, import2.HeaderComponent, [], null, null)
-    ], function (ck, v) {
-        ck(v, 1, 0);
-    }, null);
+        import1.ɵdid(24576, null, 0, import6.HeaderComponent, [], null, null)
+    ], null, null);
 }
-export var HeaderComponentNgFactory = import1.ɵccf('app-header', import2.HeaderComponent, View_HeaderComponent_Host_0, {}, {}, []);
+export var HeaderComponentNgFactory = import1.ɵccf('app-header', import6.HeaderComponent, View_HeaderComponent_Host_0, {}, {}, []);

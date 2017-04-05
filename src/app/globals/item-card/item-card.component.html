@@ -1,0 +1,28 @@
+<div class="card mar-0 z-depth-3">
+  <div class="card-image">
+    <img src="src/assets/img/img_globo-tieka-4-56185-3.jpg">
+  </div>
+  <div class="card-content">
+    <div class="md-padding">
+      <div class="category-card grey-text text-lighten-1 light truncate">
+        <ng-content select=".category"></ng-content>
+      </div>
+      <div class="title-card bold truncate">
+        <ng-content select=".name"></ng-content>
+        <div class="collection-card bold">
+          <ng-content select=".series"></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-action md-padding">
+    <div class="md-padding">
+      <div class="more-card layout-row layout-wrap">
+        <div class="flex-gt-sm-50 flex-100 layout-row layout-align-end-start"></div>
+        <div class="flex-gt-sm-50 flex-100 layout-row layout-align-end-start">
+          <ng-content select=".action"></ng-content>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

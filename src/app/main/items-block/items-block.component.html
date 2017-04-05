@@ -1,0 +1,25 @@
+<section [id]="id">
+  <div class="header-section">
+    <div class="mar-16"></div>
+    <div class="middle layout-row">
+      <div class="md-padding side relative flex-gt-md-33 flex-gt-xs-50 flex-xs-100">
+        <a class="btn-floating right header-section__more transparent flex-wrap vertical-center center z-depth-0">
+          <svg viewBox="0 0 1032.09 1032.09">
+            <path class="white-fill"
+                  d="M554.66,1060.64c-284.9,0-516-231.15-516-516s231.15-516,516-516,516,231.15,516,516S839.56,1060.64,554.66,1060.64ZM890,514.36l-61.15-61.15L585.57,210c-8.06-8.06-18.81-12.09-30.24-12.09s-22.17,4-30.24,12.09l-61.15,61.15c-8.06,8.06-12.09,18.81-12.09,30.24s4,22.17,12.09,30.24l127,127H253.63a43.31,43.31,0,0,0-43,43v86a43.31,43.31,0,0,0,43,43H590.95l-127,127a42.19,42.19,0,0,0,0,60.47l61.15,61.15c8.06,8.06,18.81,12.09,30.24,12.09s22.17-4,30.24-12.09L828.81,636,890,574.83c8.06-8.06,12.1-18.81,12.1-30.24S898,522.42,890,514.36Z"
+                  transform="translate(-38.61 -28.55)"></path>
+          </svg>
+        </a>
+        <ng-content select=".header-component.title"></ng-content>
+        <h3 class="light white-text">
+          <ng-content select=".header-component.paragraph"></ng-content>
+        </h3>
+      </div>
+    </div>
+  </div>
+  <div class="items-sections grey lighten-2">
+    <div class="middle h0">
+      <ng-content select=".items"></ng-content>
+    </div>
+  </div>
+</section>

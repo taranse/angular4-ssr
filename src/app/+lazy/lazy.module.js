@@ -9,7 +9,8 @@ export { LazyView };
 LazyView.decorators = [
     { type: Component, args: [{
                 selector: 'lazy-view',
-                template: "<h3>i'm lazy</h3>"
+                template: "<h3>i'm lazy</h3>",
+                styles: ["* {color: red}"]
             },] },
 ];
 /** @nocollapse */

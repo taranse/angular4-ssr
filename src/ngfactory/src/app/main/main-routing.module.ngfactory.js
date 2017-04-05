@@ -27,11 +27,17 @@ var MainRoutingModuleInjector = (function (_super) {
     MainRoutingModuleInjector.prototype.createInternal = function () {
         this._RouterModule_0 = new import2.RouterModule(this.parent.get(import2.ɵa, null), this.parent.get(import2.Router, null));
         this._MainRoutingModule_1 = new import1.MainRoutingModule();
-        this._ROUTES_2 = [[{
+        this._ROUTES_2 = [[
+                {
                     path: '',
                     component: import4.MainComponent
+                },
+                {
+                    path: '#main',
+                    component: import4.MainComponent
                 }
-            ]];
+            ]
+        ];
         return this._MainRoutingModule_1;
     };
     MainRoutingModuleInjector.prototype.getInternal = function (token, notFoundResult) {

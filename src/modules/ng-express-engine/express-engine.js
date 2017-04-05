@@ -4,7 +4,7 @@ import { platformServer, platformDynamicServer, PlatformState, INITIAL_CONFIG } 
 /**
  * This holds a cached version of each index used.
  */
-var templateCache = {};
+export var templateCache = {};
 /**
  * This is an express engine for handling Angular Applications
  */

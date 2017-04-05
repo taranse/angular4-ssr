@@ -7,10 +7,11 @@ import 'reflect-metadata';
 import 'rxjs/Rx';
 import * as express from 'express';
 import { ServerAppModuleNgFactory } from './ngfactory/src/app/server-app.module.ngfactory';
-import { ngExpressEngine } from './modules/ng-express-engine/express-engine';
+import { ngExpressEngine, templateCache } from './modules/ng-express-engine/express-engine';
 import { ROUTES } from './routes';
 import { App } from './api/app';
 import { enableProdMode } from '@angular/core';
+import * as compression from 'compression';
 enableProdMode();
 var app = express();
 var api = new App();
@@ -22,10 +23,13 @@ app.engine('html', ngExpressEngine({
 }));
 app.set('view engine', 'html');
 app.set('views', 'src');
-app.use('/', express.static('dist', { index: false }));
+app.use(compression());
+app.use('/', express.static('dist', { index: false, maxAge: 60 * 60 * 24 * 10 * 1000 }));
+var CACHE = new Object(null);
 ROUTES.forEach(function (route) {
     app.get(route, function (req, res) {
         console.time("GET: " + req.originalUrl);
+        res.setHeader('Cache-Control', 'public, max-age=' + (60 * 60 * 24 * 10));
         res.render('../dist/index', {
             req: req,
             res: res
@@ -35,7 +39,7 @@ ROUTES.forEach(function (route) {
 });
 app.get('/data', function (req, res) {
     console.time("GET: " + req.originalUrl);
-    res.json(api.getData());
+    res.json(templateCache);
     console.timeEnd("GET: " + req.originalUrl);
 });
 app.listen(8000, function () {

@@ -1,0 +1,8 @@
+<div class="mdb-sidenav" [@sidenavState]="sidenavState.main">
+  <div class="sidenav-content" [@sidenavContentState]="sidenavState.content">
+    <ng-content select=".mdb-header"></ng-content>
+    <ng-content select=".mdb-content"></ng-content>
+  </div>
+  <div class="sidenav-close" [@sidenavCloseState]="sidenavState.close" (click)="sidenavOpen()"></div>
+</div>
+<ng-content select=".mdb-sidenav-button"></ng-content>

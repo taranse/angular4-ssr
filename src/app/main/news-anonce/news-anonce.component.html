@@ -1,0 +1,18 @@
+<section>
+  <div class="middle layout-row">
+    <div class="md-padding side relative">
+      <h2 class="light black-text size3">Новости</h2>
+    </div>
+  </div>
+  <div class="middle layout-row layout-align-center-stretch layout-wrap">
+    <div class="md-padding flex-xs-80 flex-sm-50 flex-25 layout-row layout-align-stretch-start" *ngFor="let news of list">
+      <div class="md-padding grey lighten-4 relative flex-100">
+        <button class="absolute top left grey lighten-2 black-text md-title btn" disabled>{{news.date}}</button>
+        <div class="mar-16"></div>
+        <div class="mar-16"></div>
+        <a class="black-text" routerLink="{{news.link}}">{{news.title}}</a>
+        </div>
+    </div>
+  </div>
+  <div class="mar-16"></div>
+</section>

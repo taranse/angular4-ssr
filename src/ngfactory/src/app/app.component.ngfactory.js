@@ -8,10 +8,9 @@ import * as import0 from '@angular/core';
 import * as import1 from './globals/header/header.component.ngfactory';
 import * as import2 from '../../../app/globals/header/header.component';
 import * as import3 from '@angular/router';
-import * as import4 from '@angular/common';
-import * as import5 from './globals/footer/footer.component.ngfactory';
-import * as import6 from '../../../app/globals/footer/footer.component';
-import * as import7 from '../../../app/app.component';
+import * as import4 from './globals/footer/footer.component.ngfactory';
+import * as import5 from '../../../app/globals/footer/footer.component';
+import * as import6 from '../../../app/app.component';
 var styles_AppComponent = [];
 export var RenderType_AppComponent = import0.ɵcrt({
     encapsulation: 2,
@@ -21,124 +20,7 @@ export var RenderType_AppComponent = import0.ɵcrt({
 export function View_AppComponent_0(l) {
     return import0.ɵvid(0, [
         (l()(), import0.ɵeld(0, null, null, 1, 'app-header', [], null, null, null, import1.View_HeaderComponent_0, import1.RenderType_HeaderComponent)),
-        import0.ɵdid(57344, null, 0, import2.HeaderComponent, [], null, null),
-        (l()(), import0.ɵted(null, ['\n'])),
-        (l()(), import0.ɵeld(0, null, null, 1, 'h1', [], null, null, null, null, null)),
-        (l()(), import0.ɵted(null, ['Universal Demo'])),
-        (l()(), import0.ɵted(null, ['\n'])),
-        (l()(), import0.ɵeld(0, null, null, 2, 'a', [[
-                'routerLink',
-                '/'
-            ]
-        ], [
-            [
-                1,
-                'target',
-                0
-            ],
-            [
-                8,
-                'href',
-                4
-            ]
-        ], [[
-                null,
-                'click'
-            ]
-        ], function (v, en, $event) {
-            var ad = true;
-            if (('click' === en)) {
-                var pd_0 = (import0.ɵnov(v, 7).onClick($event.button, $event.ctrlKey, $event.metaKey) !== false);
-                ad = (pd_0 && ad);
-            }
-            return ad;
-        }, null, null)),
-        import0.ɵdid(335872, null, 0, import3.RouterLinkWithHref, [
-            import3.Router,
-            import3.ActivatedRoute,
-            import4.LocationStrategy
-        ], { routerLink: [
-                0,
-                'routerLink'
-            ]
-        }, null),
-        (l()(), import0.ɵted(null, ['Home'])),
-        (l()(), import0.ɵted(null, ['\n'])),
-        (l()(), import0.ɵeld(0, null, null, 2, 'a', [[
-                'routerLink',
-                '/lazy'
-            ]
-        ], [
-            [
-                1,
-                'target',
-                0
-            ],
-            [
-                8,
-                'href',
-                4
-            ]
-        ], [[
-                null,
-                'click'
-            ]
-        ], function (v, en, $event) {
-            var ad = true;
-            if (('click' === en)) {
-                var pd_0 = (import0.ɵnov(v, 11).onClick($event.button, $event.ctrlKey, $event.metaKey) !== false);
-                ad = (pd_0 && ad);
-            }
-            return ad;
-        }, null, null)),
-        import0.ɵdid(335872, null, 0, import3.RouterLinkWithHref, [
-            import3.Router,
-            import3.ActivatedRoute,
-            import4.LocationStrategy
-        ], { routerLink: [
-                0,
-                'routerLink'
-            ]
-        }, null),
-        (l()(), import0.ɵted(null, ['Lazy'])),
-        (l()(), import0.ɵted(null, ['\n'])),
-        (l()(), import0.ɵeld(0, null, null, 2, 'a', [[
-                'routerLink',
-                '/main'
-            ]
-        ], [
-            [
-                1,
-                'target',
-                0
-            ],
-            [
-                8,
-                'href',
-                4
-            ]
-        ], [[
-                null,
-                'click'
-            ]
-        ], function (v, en, $event) {
-            var ad = true;
-            if (('click' === en)) {
-                var pd_0 = (import0.ɵnov(v, 15).onClick($event.button, $event.ctrlKey, $event.metaKey) !== false);
-                ad = (pd_0 && ad);
-            }
-            return ad;
-        }, null, null)),
-        import0.ɵdid(335872, null, 0, import3.RouterLinkWithHref, [
-            import3.Router,
-            import3.ActivatedRoute,
-            import4.LocationStrategy
-        ], { routerLink: [
-                0,
-                'routerLink'
-            ]
-        }, null),
-        (l()(), import0.ɵted(null, ['main'])),
+        import0.ɵdid(24576, null, 0, import2.HeaderComponent, [], null, null),
         (l()(), import0.ɵted(null, ['\n'])),
         (l()(), import0.ɵeld(8388608, null, null, 1, 'router-outlet', [], null, null, null, null, null)),
         import0.ɵdid(73728, null, 0, import3.RouterOutlet, [
@@ -151,36 +33,19 @@ export function View_AppComponent_0(l) {
             ]
         ], null, null),
         (l()(), import0.ɵted(null, ['\n'])),
-        (l()(), import0.ɵeld(0, null, null, 1, 'app-footer', [], null, null, null, import5.View_FooterComponent_0, import5.RenderType_FooterComponent)),
-        import0.ɵdid(57344, null, 0, import6.FooterComponent, [], null, null),
+        (l()(), import0.ɵeld(0, null, null, 1, 'app-footer', [], null, null, null, import4.View_FooterComponent_0, import4.RenderType_FooterComponent)),
+        import0.ɵdid(57344, null, 0, import5.FooterComponent, [], null, null),
         (l()(), import0.ɵted(null, ['\n']))
     ], function (ck, v) {
-        ck(v, 1, 0);
-        var currVal_2 = '/';
-        ck(v, 7, 0, currVal_2);
-        var currVal_5 = '/lazy';
-        ck(v, 11, 0, currVal_5);
-        var currVal_8 = '/main';
-        ck(v, 15, 0, currVal_8);
-        ck(v, 22, 0);
-    }, function (ck, v) {
-        var currVal_0 = import0.ɵnov(v, 7).target;
-        var currVal_1 = import0.ɵnov(v, 7).href;
-        ck(v, 6, 0, currVal_0, currVal_1);
-        var currVal_3 = import0.ɵnov(v, 11).target;
-        var currVal_4 = import0.ɵnov(v, 11).href;
-        ck(v, 10, 0, currVal_3, currVal_4);
-        var currVal_6 = import0.ɵnov(v, 15).target;
-        var currVal_7 = import0.ɵnov(v, 15).href;
-        ck(v, 14, 0, currVal_6, currVal_7);
-    });
+        ck(v, 7, 0);
+    }, null);
 }
 function View_AppComponent_Host_0(l) {
     return import0.ɵvid(0, [
         (l()(), import0.ɵeld(0, null, null, 1, 'demo-app', [], null, null, null, View_AppComponent_0, RenderType_AppComponent)),
-        import0.ɵdid(57344, null, 0, import7.AppComponent, [], null, null)
+        import0.ɵdid(57344, null, 0, import6.AppComponent, [], null, null)
     ], function (ck, v) {
         ck(v, 1, 0);
     }, null);
 }
-export var AppComponentNgFactory = import0.ɵccf('demo-app', import7.AppComponent, View_AppComponent_Host_0, {}, {}, []);
+export var AppComponentNgFactory = import0.ɵccf('demo-app', import6.AppComponent, View_AppComponent_Host_0, {}, {}, []);
