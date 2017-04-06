@@ -1,12 +1,11 @@
 import { Component, OnInit  } from '@angular/core'
-import { TransferState } from '../modules/transfer-state/transfer-state';
+import { ReplacerService } from './services/replacer.service';
 @Component({
 	selector: 'demo-app',
-	templateUrl: 'app.component.html',
-  //styleUrls: ['../styles.scss']
+	templateUrl: 'app.component.html'
 })
 export class AppComponent implements OnInit {
-  constructor() {}
+  constructor(private replacer: ReplacerService) {}
   ngOnInit() {
   }
 }

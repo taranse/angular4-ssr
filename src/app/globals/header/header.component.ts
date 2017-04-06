@@ -2,6 +2,7 @@ import { Component, Input, OnInit, ViewChild } from '@angular/core';
 import { trigger, state, style, animate, transition} from '@angular/animations';
 import { Navigate, Phones } from './header.interface';
 import { MdbSidenavComponent } from '../../materials-bclight';
+import { ReplacerService } from '../../services/replacer.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -9,6 +10,8 @@ import { MdbSidenavComponent } from '../../materials-bclight';
 })
 export class HeaderComponent {
   @ViewChild('sidenav') sidenav: MdbSidenavComponent;
+  constructor(private replacer: ReplacerService) {}
+  isActive = false;
   phones: Phones          = {
     allPhones: ['8 800 553 55 55', '+7 (495) 517 77 34'],
     main: '8 800 553 55 55',
@@ -63,8 +66,6 @@ export class HeaderComponent {
       }
     }
   ];
-  constructor() {
-  }
 
   sidenavOpen() {
     this.sidenav.sidenavOpen();

@@ -14,7 +14,7 @@ module.exports = {
   module: {
     rules: [
       {test: /\.ts$/, loader: '@ngtools/webpack'},
-      {test: /\.html$/, loader: 'raw-loader'},
+      {test: /\.html$/, loaders: ['raw-loader']},
       {test: /\.css$/, loaders: ['to-string-loader', 'css-loader']},
       {
         test: /\.woff(2)?(\?v=[0-9]\.[0-9]\.[0-9])?$/,

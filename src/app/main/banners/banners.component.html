@@ -1,16 +1,13 @@
-<div class="layout-row layout-wrap banners-row banners-top">
-  <div class="banner flex-{{banner.width}}" *ngFor="let banner of banners.row">
-    <img [src]="banner.img" alt="">
+<div class="layout-row layout-wrap banners-row">
+  <div class="banner top-0 flex-{{banner.width.big}} flex-sm-{{banner.width.sm}} flex-xs-{{banner.width.xs}}" *ngFor="let banner of banners.row">
+    <div [innerHtml]="image.banner(banner.img, {alt: 'Это alt', title: 'Это title'})"></div>
   </div>
-</div>
-<div class="layout-row banners-row">
-  <div class="big banner flex-{{banners.column.big[0].width}}">
-      <img [src]="banners.column.big[0].img" alt="">
+  <div class="big banner flex-{{banners.column.big[0].width.big}} flex-sm-{{banners.column.big[0].width.sm}} flex-xs-{{banners.column.big[0].width.xs}}">
+    <div [innerHtml]="image.banner(banners.column.big[0].img, {alt: 'Это alt', title: 'Это title'})"></div>
   </div>
-  <div class="big flex-33 layout-row layout-wrap">
-    <div class="banner flex-{{banner.width}}" *ngFor="let banner of banners.column.small">
-      <img [src]="banner.img" alt="">
+  <div class="big flex-33 flex-xs-100 flex-sm-100 layout-row layout-wrap">
+    <div class="banner flex-{{banner.width.big}}  flex-sm-{{banner.width.sm}} flex-xs-{{banner.width.xs}}" *ngFor="let banner of banners.column.small">
+      <div [innerHtml]="image.banner(banner.img, {alt: 'Это alt', title: 'Это title'})"></div>
     </div>
   </div>
-
 </div>

@@ -1,13 +1,17 @@
-
 /deep/ {
-  mdb-button[mdb-icon] {
-    box-shadow: none;
-    span.wave-effect {background:rgba(0, 0, 0, .0);width: 100%;height: 100%;display: block;position: absolute;top: 0;transition: .5s all ease}
-    &:hover {
-      span.wave-effect { background:rgba(0, 0, 0, .1) }
+  mdb-button {
+    &.btn { display:flex; justify-content:center; align-items:center; }
+    &.code { max-width:100px; }
+    &[mdb-icon] {
+      box-shadow:none;
+      span.wave-effect { background:rgba(0, 0, 0, .0); width:100%; height:100%; display:block; position:absolute; top:0; transition:.5s all ease }
+      &:hover {
+        span.wave-effect { background:rgba(0, 0, 0, .1) }
+      }
+      &:active {
+        span.wave-effect { background:rgba(255, 255, 255, .3) }
+      }
     }
-    &:active {
-      span.wave-effect { background:rgba(255, 255, 255, .3) }
-    }
+    i.material-icons.left { margin-right:5px; }
   }
 }

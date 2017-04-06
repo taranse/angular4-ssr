@@ -1,7 +1,7 @@
 @import "media";
 .flex {
-  &-33 {max-width: 33%;flex:1 1 33%}
-  &-66 {max-width: 66%;flex:1 1 66%}
+  &-33 {max-width: 33.333333333%;flex:1 1 33.3333333333333%}
+  &-66 {max-width: 66.666666666%;flex:1 1 66.6666666666666%}
   @for $i from 1 through 20 {
     &-#{$i * 5} {
       flex:1 1 ($i * 5 * 1%);
@@ -11,8 +11,8 @@
   @each $col in $grid {
     &-#{$col} {
       @include respond-to($col) {
-        &-33 {max-width: 33%;flex:1 1 33% !important}
-        &-66 {max-width: 66%;flex:1 1 66% !important}
+        &-33 {max-width: 33.333333333%;flex:1 1 33.333333333% !important}
+        &-66 {max-width: 66.666666666%;flex:1 1 66.666666666% !important}
         @for $i from 1 through 20 {
           &-#{$i * 5} {
             flex:1 1 ($i * 5 * 1%) !important;
@@ -82,7 +82,7 @@
             justify-content:space-#{$row1};
           }
           @if ($row2 == start or $row2 == end) {
-            align-items:fex-#{$row2};
+            align-items:flex-#{$row2};
           } @else {
             align-items:#{$row2};
           }

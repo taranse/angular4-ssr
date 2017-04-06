@@ -1,7 +1,6 @@
 #factories_items {
   .md-caption { font-size:14px;}
-  img {width:100%;}
-  @media (max-width: 500px) {
-    .md-caption { font-size:13px;}
-  }
+  /deep/ img {width:100%;}
+  .md-caption { font-size:12px;}
+
 }

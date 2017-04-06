@@ -1,4 +1,4 @@
-img {
+:host /deep/ img {
   width: 100%;
 }
 .banners-row {
@@ -6,7 +6,7 @@ img {
   .banner{
     padding: 8px;
   }
-  &.banners-top .banner:nth-child(1)  {
+  .top-0:nth-child(1)  {
     padding-top: 0;
   }
 }

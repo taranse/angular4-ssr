@@ -12,194 +12,188 @@
 <!--&lt;!&ndash;</div>&ndash;&gt;-->
 <!--&lt;!&ndash;<div class="sidenav-close" (click)="sidenav.close()"></div>&ndash;&gt;-->
 <!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--<header class="relative">-->
-<nav class="grey lighten-2 header">
-  <div class="middle layout-row">
-    <div class="md-padding side nav-content flex-gt-sm-60 flex-gt-xs-33 flex-25 layout-row">
-      <mdb-sidenav #sidenav>
-        <div class="mdb-header"></div>
-        <div class="mdb-content">123</div>
-        <mdb-button class="grey lighten-2 menu-sidenav-button btn-floating hide show-gt-sm-down mdb-sidenav-button" mdb-icon (click)="sidenavOpen()">
-          <i class="material-icons">menu</i>
-        </mdb-button>
-      </mdb-sidenav>
+<header class="relative">
+  <nav class="grey lighten-2 header">
+    <div class="middle layout-row">
+      <div class="md-padding side nav-content flex-gt-sm-60 flex-gt-xs-33 flex-25 layout-row">
+        <mdb-sidenav #sidenav>
+          <div class="mdb-header"></div>
+          <div class="mdb-content">123</div>
+          <mdb-button class="grey lighten-2 menu-sidenav-button btn-floating hide show-gt-sm-down mdb-sidenav-button" mdb-icon
+                      (click)="sidenavOpen()">
+            <i class="material-icons">menu</i>
+          </mdb-button>
+        </mdb-sidenav>
 
-      <!--<ul>-->
+        <!--<ul>-->
         <!--<li *ngFor="let navigate of navigateTop" class="{{navigate.selectorClass}}">-->
-          <!--<a routerLink="{{navigate.link.alias}}" routerLinkActive="active">{{navigate.name}}</a>-->
+        <!--<a routerLink="{{navigate.link.alias}}" routerLinkActive="active">{{navigate.name}}</a>-->
         <!--</li>-->
-      <!--</ul>-->
-      <mdb-nav class="hide show-gt-sm">
-        <a *ngFor="let navigate of navigateTop" class="{{navigate.selectorClass}}" routerLink="{{navigate.link.alias}}" routerLinkActive="active">
-          {{navigate.name}}
-        </a>
-      </mdb-nav>
-      <!--<a *ngFor="let navigate of navigateTop" routerLink="{{navigate.link.alias}}" class="{{navigate.selectorClass}} nav-content hide show-gt-sm">-->
-      <!--{{navigate.name}}-->
-      <!--</a>-->
+        <!--</ul>-->
+        <mdb-nav class="hide show-gt-sm">
+          <a *ngFor="let navigate of navigateTop" class="{{navigate.selectorClass}}" routerLink="{{navigate.link.alias}}" routerLinkActive="active">
+            {{navigate.name}}
+          </a>
+        </mdb-nav>
+        <!--<a *ngFor="let navigate of navigateTop" routerLink="{{navigate.link.alias}}" class="{{navigate.selectorClass}} nav-content hide show-gt-sm">-->
+        <!--{{navigate.name}}-->
+        <!--</a>-->
 
+      </div>
+      <div class="md-padding side nav-content flex-gt-sm-40 flex-gt-xs-66 flex-75 layout-row layout-align-end-center">
+        <button class="hide-gt-sm waves-effect waves-light btn">
+          a
+        </button>
+        <!--<md-menu #menu="mdMenu">-->
+        <!--<a *ngFor="let phone of phones.allPhones" md-menu-item>{{phone}}</a>-->
+        <!--</md-menu>-->
+        <p class="hide show-gt-sm layout-row layout-align-end-center black-text">
+          Звонок по России бесплатно - &nbsp;<a class="black-text" href="tel:{{replacer.phone(phones.main)}}">{{phones.main}}</a>
+        </p>
+      </div>
     </div>
-    <div class="md-padding side nav-content flex-gt-sm-40 flex-gt-xs-66 flex-75 layout-row layout-align-end-center">
-      <button class="hide-gt-sm waves-effect waves-light btn">
-        a
-      </button>
-      <!--<md-menu #menu="mdMenu">-->
-      <!--<a *ngFor="let phone of phones.allPhones" md-menu-item>{{phone}}</a>-->
-      <!--</md-menu>-->
-      <p class="hide show-gt-sm layout-row layout-align-end-center">
-        Звонок по России бесплатно - &nbsp;<a class="black-text">{{phones.main}}</a>
-      </p>
+  </nav>
+  <div class="middle layout-row layout-wrap layout-align-between-start" id="header_logo">
+    <div class="flex-40 flex-sm-50 layout-row flex-xs-100">
+      <a class="md-padding block flex-50" href="/">
+        <app-logo></app-logo>
+      </a>
+      <div class="flex-gt-xs-50 layout-align-start-center layout-row">
+        <div>
+          <span>Город: &nbsp;Москва</span>
+          <span class="hide show-gt-sm size09">356 пунктов выдачи заказов<br/><a class="grey-text text-darken-3">Условия доставки</a></span>
+        </div>
+      </div>
+    </div>
+    <div class="md-padding flex-40 flex-sm-50 flex-xs-100 layout-100 layout-row layout-align-end-center login-panel-header">
+      <div class="flex-gt-md-30 flex-gt-sm-35 flex-sm-40">Личный кабинет<br/>и статус заказа</div>
+      <div class="lk-svg flex-gt-xs-15">
+        <svg viewBox="0 0 435.65 534.56">
+          <path class="grey-fill fill-darken-1"
+                d="M269.48,436,246.91,407s76.74-95.11,200.9-86.27V587.63S329.29,608,227.64,480.35,48.51,357.89,48.51,357.89V545.65s19.71,28.89,139.87-70.48l24.68,26.2s-98.65,104-200.89,86.26V320.75s139.3-22.43,240.94,134.17c0,0,69.3,88.42,158.26,96.51V359.63S356.36,350.53,269.48,436Z"
+                transform="translate(-12.17 -55.1)"></path>
+          <path class="grey-fill fill-darken-1"
+                d="M327.78,152.89a97.79,97.79,0,1,0-187.68,38.5h0l0,0a341.33,341.33,0,0,1,22,31.76c10.71,17.51,21.66,39.3,23.39,57.44h89.24c1.74-18.32,12.89-40.36,23.7-58a347.21,347.21,0,0,1,21-30.4l.69-.88h-.27A97.43,97.43,0,0,0,327.78,152.89Zm-155.14,1.9a152.15,152.15,0,0,0-2.79,41.5c-4.87-7.11-9-12.6-11.27-15.58a76.31,76.31,0,0,1,81-103.78C196.88,94.16,179.06,125.11,172.64,154.78Z"
+                transform="translate(-12.17 -55.1)"></path>
+          <path class="grey-fill fill-darken-1"
+                d="M264,298.47H196A10.6,10.6,0,0,0,185.4,309v6.61A10.6,10.6,0,0,0,196,326.22h4.29v7.6a5.3,5.3,0,0,0,5.29,5.29h48.89a5.3,5.3,0,0,0,5.29-5.29v-7.6H264a10.6,10.6,0,0,0,10.57-10.57V309A10.6,10.6,0,0,0,264,298.47Z"
+                transform="translate(-12.17 -55.1)"></path>
+        </svg>
+      </div>
+      <div class="text right flex-gt-md-25 flex-gt-sm-30 flex-sm-35 layout-column layout-align-center-end">
+        <a class="layout-row text-darken-3 grey-text"><i class="material-icons">star</i><span>Избранное</span></a>
+        <a class="layout-row text-darken-3 grey-text"><i class="material-icons">work</i><span>Проекты</span></a>
+      </div>
     </div>
   </div>
-</nav>
-<!--&lt;!&ndash;<div class="middle" id="header_logo" fxLayout="row" fxLayoutAlign="space-between" fxLayoutWrap="layout-wrap">&ndash;&gt;-->
-<!--&lt;!&ndash;<div fxFlex="40" fxFlex.sm="50" fxLayout="row" fxFlex.xs="100">&ndash;&gt;-->
-<!--&lt;!&ndash;<a class="md-padding block" href="/" fxFlex="50" fxFlex.xs="flex-xs">&ndash;&gt;-->
-<!--&lt;!&ndash;<app-logo></app-logo>&ndash;&gt;-->
-<!--&lt;!&ndash;</a>&ndash;&gt;-->
-<!--&lt;!&ndash;<div fxFlex.gt-xs="50" fxLayoutAlign="start center" fxLayout="row">&ndash;&gt;-->
-<!--&lt;!&ndash;<div><span>Город: &nbsp;</span>&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-select class="inline-block md-accent mar-0" ng-model="country" aria-label="Country Selected">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-option class="md-accent md-hue-2" value="Москва">Москва</md-option>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-option class="md-accent md-hue-2" value="Санкт-Петербург">Санкт-Петербург</md-option>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-option class="md-accent md-hue-2" value="Ижевск">Ижевск</md-option>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</md-select>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;<span fxHide="hide" fxShow.gt-sm="show-gt-sm">&ndash;&gt;-->
-<!--&lt;!&ndash;<br/>&ndash;&gt;-->
-<!--&lt;!&ndash;356 пунктов выдачи заказов&ndash;&gt;-->
-<!--&lt;!&ndash;<br/>&ndash;&gt;-->
-<!--&lt;!&ndash;<a>Условия доставки</a>&ndash;&gt;-->
-<!--&lt;!&ndash;</span>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="md-padding" fxFlex="40" fxFlex.sm="50" fxFlex.xs="100" fxLayout="row" fxLayoutAlign="end center">&ndash;&gt;-->
-<!--&lt;!&ndash;<div fxFlex.gt-md="30" fxFlex.gt-sm="35" fxFlex.sm="40">Личный кабинет<br/>и статус заказа</div>&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="md&#45;&#45;padding side lk-svg" fxFlex.gt-xs="15">&ndash;&gt;-->
-<!--&lt;!&ndash;<svg viewBox="0 0 435.65 534.56">&ndash;&gt;-->
-<!--&lt;!&ndash;<path class="grey-fill fill-darken-1"&ndash;&gt;-->
-<!--&lt;!&ndash;d="M269.48,436,246.91,407s76.74-95.11,200.9-86.27V587.63S329.29,608,227.64,480.35,48.51,357.89,48.51,357.89V545.65s19.71,28.89,139.87-70.48l24.68,26.2s-98.65,104-200.89,86.26V320.75s139.3-22.43,240.94,134.17c0,0,69.3,88.42,158.26,96.51V359.63S356.36,350.53,269.48,436Z"&ndash;&gt;-->
-<!--&lt;!&ndash;transform="translate(-12.17 -55.1)"></path>&ndash;&gt;-->
-<!--&lt;!&ndash;<path class="grey-fill fill-darken-1"&ndash;&gt;-->
-<!--&lt;!&ndash;d="M327.78,152.89a97.79,97.79,0,1,0-187.68,38.5h0l0,0a341.33,341.33,0,0,1,22,31.76c10.71,17.51,21.66,39.3,23.39,57.44h89.24c1.74-18.32,12.89-40.36,23.7-58a347.21,347.21,0,0,1,21-30.4l.69-.88h-.27A97.43,97.43,0,0,0,327.78,152.89Zm-155.14,1.9a152.15,152.15,0,0,0-2.79,41.5c-4.87-7.11-9-12.6-11.27-15.58a76.31,76.31,0,0,1,81-103.78C196.88,94.16,179.06,125.11,172.64,154.78Z"&ndash;&gt;-->
-<!--&lt;!&ndash;transform="translate(-12.17 -55.1)"></path>&ndash;&gt;-->
-<!--&lt;!&ndash;<path class="grey-fill fill-darken-1"&ndash;&gt;-->
-<!--&lt;!&ndash;d="M264,298.47H196A10.6,10.6,0,0,0,185.4,309v6.61A10.6,10.6,0,0,0,196,326.22h4.29v7.6a5.3,5.3,0,0,0,5.29,5.29h48.89a5.3,5.3,0,0,0,5.29-5.29v-7.6H264a10.6,10.6,0,0,0,10.57-10.57V309A10.6,10.6,0,0,0,264,298.47Z"&ndash;&gt;-->
-<!--&lt;!&ndash;transform="translate(-12.17 -55.1)"></path>&ndash;&gt;-->
-<!--&lt;!&ndash;</svg>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="text right" fxFlex.gt-md="25" fxFlex.gt-sm="30" fxFlex.sm="35"><a class="inline-block">&ndash;&gt;-->
-<!--&lt;!&ndash;<md-icon>star</md-icon>&ndash;&gt;-->
-<!--&lt;!&ndash;<span>Избранное</span></a><br/><a class="inline-block">&ndash;&gt;-->
-<!--&lt;!&ndash;<md-icon>work</md-icon>&ndash;&gt;-->
-<!--&lt;!&ndash;<span>Проекты</span></a></div>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="navigate-orange-bottom amber darken-2">&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="middle relative" fxLayout="row">&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="md-padding side np-md" fxFlex.gt-sm="60" fxFlex="75" fxFlex.xs="100">&ndash;&gt;-->
-<!--&lt;!&ndash;<div fxLayout="row" fxLayoutAlign="space-between">&ndash;&gt;-->
-<!--&lt;!&ndash;<button md-button class="catalog-button catalog-list mar-0" fxHide.xs data-container="#catalog_list" data-timer="300">&ndash;&gt;-->
-<!--&lt;!&ndash;<md-icon>menu</md-icon>&ndash;&gt;-->
-<!--&lt;!&ndash;Каталог <span class="hide-on-tab">товаров</span>&ndash;&gt;-->
-<!--&lt;!&ndash;</button>&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="right catalog-button" fxHide fxShow.xs fxFlex.xs="15"&ndash;&gt;-->
-<!--&lt;!&ndash;data-container="#catalog_list" data-timer="300">&ndash;&gt;-->
-<!--&lt;!&ndash;<button md-button md-icon-button>&ndash;&gt;-->
-<!--&lt;!&ndash;<md-icon>menu</md-icon>&ndash;&gt;-->
-<!--&lt;!&ndash;</button>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;<div fxFlex="100" fxFlex.xs="70" fxLayout="row" fxLayoutAlign="center">&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="relative md-margin search-head-block" fxLayout="row">&ndash;&gt;-->
-<!--&lt;!&ndash;<md-icon class="absolute center left">search</md-icon>&ndash;&gt;-->
-<!--&lt;!&ndash;<input type="text" placeholder="Поиск" fxFlex="100"/>&ndash;&gt;-->
-<!--&lt;!&ndash;<button md-icon-button md-button class="md-fab absolute center right md-mini">&ndash;&gt;-->
-<!--&lt;!&ndash;<md-icon>arrow_forward</md-icon>&ndash;&gt;-->
-<!--&lt;!&ndash;</button>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="right center" fxHide fxShow.xs fxFlex.xs="15">&ndash;&gt;-->
-<!--&lt;!&ndash;<button md-button md-icon-button>&ndash;&gt;-->
-<!--&lt;!&ndash;<md-icon>shopping_cart</md-icon>&ndash;&gt;-->
-<!--&lt;!&ndash;</button>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="md-padding side" fxFlex.gt-sm="25" fxHide fxShow.gt-sm fxLayout="row" fxLayoutAlign="end center">&ndash;&gt;-->
-<!--&lt;!&ndash;<div fxLayout="column" fxLayoutAlign="center center">&ndash;&gt;-->
-<!--&lt;!&ndash;<p class="white-text">Операторы онлайн</p>&ndash;&gt;-->
-<!--&lt;!&ndash;<a class="flow-text white-text" href="tel:{{phoneReplace(phones.operator)}}">{{phones.operator}}</a>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;<div class="md-padding side np-md" fxFlex.gt-sm="15" fxFlex="25" fxHide.xs>&ndash;&gt;-->
-<!--&lt;!&ndash;<button md-button class="catalog-button right mar-0">&ndash;&gt;-->
-<!--&lt;!&ndash;<md-icon>shopping_cart</md-icon>&ndash;&gt;-->
-<!--&lt;!&ndash;Корзина&ndash;&gt;-->
-<!--&lt;!&ndash;</button>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<div class="md-padding side np-md" id="catalog_list">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<div class="md-padding w100" md-colors="{background: 'grey-200'}" layout="row" layout-align="stretch">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list class="over-x-hidden" flex="33" hide-xs="hide-xs">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line md&#45;&#45;padding over catalog-line" ng-repeat="item in catalog"&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;layout="row" ng-class="classCatalogItem(selected, $index)" md-no-ink="md-no-ink">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<a ng-mouseenter="selectedItem($index)" ui-sref="catalog.category">{{item.name}}</a>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</md-list>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<div class="md-padding over-auto" flex="66" hide-xs="hide-xs" md-colors="{background: 'grey-A100'}"&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;layout="row" layout-wrap="layout-wrap">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<div flex="50" flex-gt-md="25"><h4 class="bold md-subhead">Место применения:</h4>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list class="pad-4">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item ng-repeat="destination in catalog[selected].destination">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;{{destination.name}}&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</md-list>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<div flex="50" flex-gt-md="25"><h4 class="bold md-subhead">Ценовая категория:</h4>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list class="md-padding over">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;ng-repeat="priceCategory in catalog[selected].priceCategory">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;{{priceCategory.name}}&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line" md-colors="{color: 'red-700'}">Распродажа</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</md-list>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-button class="md-raised" md-colors="{background: 'grey-200'}">Все люстры</md-button>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<div flex="50" flex-gt-md="25"><h4 class="bold md-subhead">Производитель:</h4>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list class="md-padding over">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">ACF</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Alt Lucialternative</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Archeo Venice</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Arte Lamp</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Artemide</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Astro</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Aureliano Toso</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</md-list>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-button class="md-raised" md-colors="{background: 'grey-200'}">Все бренды</md-button>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<div class="md-padding side" flex="50" flex-gt-md="25" layout="column"&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;layout-align="start center"><h4 class="bold md-subhead">Товар дня:</h4>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<div class="mar-30"></div>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-button class="md-fab mar-0 pad-0 item-day" aria-label="item of the day"><img&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;class="md-avatar" ng-src="img/img_lightstar-diafano-1-758084.jpg"/></md-button>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<div class="md-padding over center">Люстра<br/>Favorite Fara</div>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-button class="md-raised" md-colors="{background: 'grey-200'}">Подробнее</md-button>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list class="over-x-hidden" flex="100" hide="hide" show-xs="show-xs">&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line md&#45;&#45;padding over pad-0 navigate-catalog-sm"&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;ng-repeat="item in catalog" layout="row" ng-href="/">{{item.name}}&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</md-list-item>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</md-list>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--&lt;!&ndash;</div>&ndash;&gt;-->
-<!--</header>-->
+  <div class="navigate-orange-bottom amber darken-2">
+    <div class="middle relative layout-row">
+      <div class="md-padding side flex-gt-sm-60 flex-75 flex-xs-100">
+        <div class="layout-row layout-align-space-between">
+          <mdb-button class="catalog-button mar-0 hide-xs orange darken-1 layout-row layout-align-center-center btn z-depth-0">
+            <i class="material-icons">menu</i> Каталог<span class="hide-on-tab">&nbsp;товаров</span>
+          </mdb-button>
+          <div class="right hide show-xs flex-xs-15">
+            <mdb-button mdb-icon class="catalog-button btn-floating transparent">
+              <i class="material-icons">menu</i>
+            </mdb-button>
+          </div>
+          <div class="flex-100 flex-xs-70 layout-row layout-align-center-start">
+            <div class="relative md-margin search-head-block layout-row">
+              <mdb-button disabled mdb-icon md-button class="btn-floating absolute center left transparent z-depth-0 grey-text text-darken-3">
+                <i class="material-icons">search</i>
+              </mdb-button>
+              <input class="flex-100 mar-0" type="text" placeholder="Поиск">
+              <mdb-button mdb-icon md-button class="btn-floating absolute center right transparent z-depth-0 grey-text text-darken-3">
+                <i class="material-icons">arrow_forward</i>
+              </mdb-button>
+            </div>
+          </div>
+          <div class="right center hide show-xs flex-xs-15">
+            <mdb-button mdb-icon class="btn-floating transparent catalog-button">
+              <i class="material-icons">shopping_cart</i>
+            </mdb-button>
+          </div>
+        </div>
+      </div>
+      <div class="md-padding side hide show-gt-sm flex-gt-sm-25">
+        <div class="layout-column layout-align-center-end h100">
+          <p class="white-text">Операторы онлайн</p>
+          <a class="flow-text white-text" href="tel:{{replacer.phone(phones.operator)}}">{{phones.operator}}</a>
+        </div>
+      </div>
+      <div class="md-padding side np-md flex-gt-sm-15 flex-25 hide-xs">
+        <!--TODO если в корзине что-то есть - она зеленая-->
+        <mdb-button
+          class="catalog-button right mar-0 layout-row layout-align-center-center btn z-depth-0 {{isActive ? 'green' : 'transparent'}}"
+          (click)="isActive = !isActive">
+          <i class="material-icons">shopping_cart</i>
+          Корзина
+        </mdb-button>
+      </div>
+      <!--<div class="md-padding side np-md" id="catalog_list">-->
+        <!--<div class="md-padding w100 layout-row layout-align" md-colors="{background: 'grey-200'}" layout="row" layout-align="stretch">-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list class="over-x-hidden" flex="33" hide-xs="hide-xs">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line md&#45;&#45;padding over catalog-line" ng-repeat="item in catalog"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;layout="row" ng-class="classCatalogItem(selected, $index)" md-no-ink="md-no-ink">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<a ng-mouseenter="selectedItem($index)" ui-sref="catalog.category">{{item.name}}</a>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</md-list>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<div class="md-padding over-auto" flex="66" hide-xs="hide-xs" md-colors="{background: 'grey-A100'}"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;layout="row" layout-wrap="layout-wrap">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<div flex="50" flex-gt-md="25"><h4 class="bold md-subhead">Место применения:</h4>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list class="pad-4">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item ng-repeat="destination in catalog[selected].destination">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;{{destination.name}}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</md-list>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<div flex="50" flex-gt-md="25"><h4 class="bold md-subhead">Ценовая категория:</h4>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list class="md-padding over">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;ng-repeat="priceCategory in catalog[selected].priceCategory">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;{{priceCategory.name}}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line" md-colors="{color: 'red-700'}">Распродажа</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</md-list>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-button class="md-raised" md-colors="{background: 'grey-200'}">Все люстры</md-button>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<div flex="50" flex-gt-md="25"><h4 class="bold md-subhead">Производитель:</h4>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list class="md-padding over">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">ACF</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Alt Lucialternative</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Archeo Venice</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Arte Lamp</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Artemide</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Astro</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line">Aureliano Toso</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line"></md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</md-list>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-button class="md-raised" md-colors="{background: 'grey-200'}">Все бренды</md-button>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<div class="md-padding side" flex="50" flex-gt-md="25" layout="column"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;layout-align="start center"><h4 class="bold md-subhead">Товар дня:</h4>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<div class="mar-30"></div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-button class="md-fab mar-0 pad-0 item-day" aria-label="item of the day"><img&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;class="md-avatar" ng-src="img/img_lightstar-diafano-1-758084.jpg"/></md-button>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<div class="md-padding over center">Люстра<br/>Favorite Fara</div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-button class="md-raised" md-colors="{background: 'grey-200'}">Подробнее</md-button>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</div>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list class="over-x-hidden" flex="100" hide="hide" show-xs="show-xs">&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;<md-list-item class="md-1-line md&#45;&#45;padding over pad-0 navigate-catalog-sm"&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;ng-repeat="item in catalog" layout="row" ng-href="/">{{item.name}}&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</md-list-item>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+          <!--&lt;!&ndash;&lt;!&ndash;&lt;!&ndash;</md-list>&ndash;&gt;&ndash;&gt;&ndash;&gt;-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </div>
+</header>

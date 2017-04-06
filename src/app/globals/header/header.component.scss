@@ -4,7 +4,7 @@ nav.header {
   }
 }
 nav {
-  height: 48px;
+  height:48px;
   .button-collapse {
     margin:0
   }
@@ -21,6 +21,14 @@ nav {
     }
   }
 }
+.login-panel-header {
+  a { line-height:30px }
+  svg { margin:-8px 0; }
+  @media (min-width:600px) and (max-width:959px) {
+    svg { margin:0; }
+  }
+}
+.catalog-button[mdb-icon] { width:40px; height:40px; margin:5px }
 .navigate-orange-bottom {
   z-index:2; height:75px; width:100%;
   .container { position:relative }
@@ -58,9 +66,7 @@ nav {
 }
 .navigate-catalog-sm { border-bottom:1px solid grey; }
 .navigate-catalog-sm:nth-child(1) { border-top:1px solid grey; }
-
-
-@media (max-width:959px){
+@media (max-width:959px) {
   .navigate-orange-bottom, .navigate-orange--operator, .catalog-button { height:55px; }
   .search-head-block button.md-button.md-fab { height:30px; width:30px; min-height:auto; padding:0; text-align:center; right:6px; }
 }
@@ -83,7 +89,7 @@ nav {
 }
 //SIDENAV//
 #sidenav {
-  position:fixed; overflow:hidden; height:100%; width:100%; top:0;z-index: 10;display:none;
-  .sidenav-close { background-color:rgba(0, 0, 0, .5);position:absolute;z-index: 1;height:100%; width:100%;opacity:.5 }
-  .sidenav-content { position:absolute;z-index:2;height:100%; background-color:#fff;width:220px;left:-220px }
+  position:fixed; overflow:hidden; height:100%; width:100%; top:0; z-index:10; display:none;
+  .sidenav-close { background-color:rgba(0, 0, 0, .5); position:absolute; z-index:1; height:100%; width:100%; opacity:.5 }
+  .sidenav-content { position:absolute; z-index:2; height:100%; background-color:#fff; width:220px; left:-220px }
 }

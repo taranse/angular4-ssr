@@ -1,6 +1,11 @@
 <div class="card mar-0 z-depth-3">
-  <div class="card-image">
-    <img src="src/assets/img/img_globo-tieka-4-56185-3.jpg">
+  <mdb-button disabled class="btn absolute right top code">
+    <i class="material-icons left">label_outline</i>
+    <ng-content select=".id"></ng-content>
+  </mdb-button>
+  <div class="card-image"
+       [innerHtml]="image.product('i1.jpg', {alt: 'Это товар', title: 'Это тайтл товара', alias: {factory: 'globo', series: 'teika', id: 56185}})">
+    <!--<img src="src/assets/img/img_globo-tieka-4-56185-3.jpg">-->
   </div>
   <div class="card-content">
     <div class="md-padding">

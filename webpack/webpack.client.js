@@ -19,8 +19,8 @@ const autoprefixer                                = require('autoprefixer');
  */
 module.exports = {
   entry: {
-    "client": root('./src/main.browser.ts'),
     "styles": root("./src/styles.scss"),
+    "client": root('./src/main.browser.ts'),
     //"fonts": "https://fonts.googleapis.com/icon?family=Material+Icons"
   },
   output: {
