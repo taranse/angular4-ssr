@@ -4,4 +4,4 @@
 /yarn.lock
 *.log
 *.metadata.json
-/src/app/*.js
+/src/app/**/*.js
